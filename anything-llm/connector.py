@@ -6,7 +6,7 @@
 
 from connectors.core.connector import Connector, ConnectorError, get_logger
 from .operations import operations_map
-logger = get_logger('connector_anything-llm')
+logger = get_logger('anything-llm')
 
 
 class AnythingLLM(Connector):
