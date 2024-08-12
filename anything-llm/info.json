@@ -1,0 +1,767 @@
+{
+  "name": "anything-llm",
+  "label": "Anything LLM",
+  "version": "1.0.0",
+  "description": "This connector is providing automation actions for Anything LLM that supports using Retrieval Augmented Generation (RAG) with an LLM and user documents embedded in a vector DB. The LLM and vector DB can be fully local for maximum data privacy or configured to use cloud-based services such as OpenAI. A variety of LLMs and vector DBs are supported. Anything LLM itself can be installed on customer infrastructure or accessed as a cloud service.",
+  "publisher": "Fortinet",
+  "cs_approved": true,
+  "cs_compatible": true,
+  "contributor": "",
+  "category": "ML Service",
+  "icon_small_name": "llm_small.png",
+  "icon_large_name": "llm_large.png",
+  "help_online": "",
+  "configuration": {
+    "fields": [
+      {
+        "title": "Server URL",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "text",
+        "name": "server_url",
+        "description": "Server URL to which you will connect and perform the automated operations.",
+        "tooltip": "Server URL to which you will connect and perform the automated operations."
+      },
+      {
+        "title": "API Key",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "password",
+        "name": "api_key",
+        "description": "API key to access the Anything LLM server.",
+        "tooltip": "API key to access the Anything LLM server."
+      },
+      {
+        "title": "Verify SSL",
+        "required": false,
+        "editable": true,
+        "visible": true,
+        "type": "checkbox",
+        "name": "verify_ssl",
+        "value": true,
+        "description": "Specifies whether the SSL certificate for the server is to be verified. By default, this option is set as True.",
+        "tooltip": "Specifies whether the SSL certificate for the server is to be verified. By default, this option is set as True."
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "get_documents",
+      "title": "Get List of All Documents",
+      "description": "List of all document those are uploaded on server.",
+      "category": "investigation",
+      "annotation": "get_documents",
+      "parameters": [],
+      "enabled": true,
+      "output_schema": {
+        "localFiles": {
+          "name": "",
+          "type": "",
+          "items": [
+            {
+              "name": "",
+              "type": "",
+              "items": [
+                {
+                  "id": "",
+                  "url": "",
+                  "name": "",
+                  "type": "",
+                  "title": "",
+                  "cached": "",
+                  "watched": "",
+                  "canWatch": "",
+                  "docAuthor": "",
+                  "docSource": "",
+                  "published": "",
+                  "wordCount": "",
+                  "chunkSource": "",
+                  "description": "",
+                  "pinnedWorkspaces": [],
+                  "token_count_estimate": ""
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "get_document",
+      "title": "Get Document",
+      "description": "Get document details by providing there name.",
+      "category": "investigation",
+      "annotation": "get_document",
+      "parameters": [
+        {
+          "title": "Document Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "doc_name",
+          "description": "Provide document name to get document details.",
+          "tooltip": "Provide document name to get document details."
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "document": {
+          "id": "",
+          "url": "",
+          "name": "",
+          "type": "",
+          "title": "",
+          "cached": "",
+          "docAuthor": "",
+          "docSource": "",
+          "published": "",
+          "wordCount": "",
+          "chunkSource": "",
+          "description": "",
+          "token_count_estimate": ""
+        }
+      }
+    },
+    {
+      "operation": "get_workspace_list",
+      "title": "Get List of all Workspace",
+      "description": "Get list of all current workspace present on AnythingLLM server.",
+      "category": "investigation",
+      "annotation": "get_workspace_list",
+      "parameters": [],
+      "enabled": true,
+      "output_schema": {
+        "workspaces": [
+          {
+            "id": "",
+            "name": "",
+            "slug": "",
+            "topN": "",
+            "chatMode": "",
+            "chatModel": "",
+            "createdAt": "",
+            "vectorTag": "",
+            "agentModel": "",
+            "openAiTemp": "",
+            "pfpFilename": "",
+            "chatProvider": "",
+            "openAiPrompt": "",
+            "agentProvider": "",
+            "lastUpdatedAt": "",
+            "openAiHistory": "",
+            "similarityThreshold": "",
+            "queryRefusalResponse": ""
+          }
+        ]
+      }
+    },
+    {
+      "operation": "get_workspace",
+      "title": "Get Workspace",
+      "description": "Get workspace details by providing Workspace Slug.",
+      "category": "investigation",
+      "annotation": "get_workspace",
+      "parameters": [
+        {
+          "title": "Workspace Slug",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "workspace_name",
+          "description": "Provide Workspace Slug to get workspace details.",
+          "tooltip": "Provide Workspace Slug to get workspace details."
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "message": "",
+        "workspace": {
+          "id": "",
+          "name": "",
+          "slug": "",
+          "topN": "",
+          "chatMode": "",
+          "chatModel": "",
+          "createdAt": "",
+          "vectorTag": "",
+          "agentModel": "",
+          "openAiTemp": "",
+          "pfpFilename": "",
+          "chatProvider": "",
+          "openAiPrompt": "",
+          "agentProvider": "",
+          "lastUpdatedAt": "",
+          "openAiHistory": "",
+          "similarityThreshold": "",
+          "queryRefusalResponse": ""
+        }
+      }
+    },
+    {
+      "operation": "add_workspace_embedding",
+      "title": "Add Workspace Embedding",
+      "description": "Add a document to a workspace and create its vector embedding in the workspace.",
+      "category": "investigation",
+      "annotation": "add_workspace_embedding",
+      "parameters": [
+        {
+          "title": "Workspace Slug",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "workspace_name",
+          "description": "Provide Workspace Slug to embedding the document.",
+          "tooltip": "Provide Workspace Slug to embedding the document."
+        },
+        {
+          "title": "Folder Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "folder_name",
+          "description": "Provide folder name to add document from directory.",
+          "tooltip": "Provide folder name to add document from directory."
+        },
+        {
+          "title": "Document Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "doc_name",
+          "description": "Provide the name of document to add embedding from provided directory.",
+          "tooltip": "Provide the name of document to add embedding from provided directory."
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "workspace": {
+          "id": "",
+          "name": "",
+          "slug": "",
+          "topN": "",
+          "chatMode": "",
+          "chatModel": "",
+          "createdAt": "",
+          "documents": [
+            {
+              "id": "",
+              "docId": "",
+              "pinned": "",
+              "docpath": "",
+              "watched": "",
+              "filename": "",
+              "metadata": "",
+              "createdAt": "",
+              "workspaceId": "",
+              "lastUpdatedAt": ""
+            }
+          ],
+          "vectorTag": "",
+          "agentModel": "",
+          "openAiTemp": "",
+          "pfpFilename": "",
+          "chatProvider": "",
+          "openAiPrompt": "",
+          "agentProvider": "",
+          "lastUpdatedAt": "",
+          "openAiHistory": "",
+          "similarityThreshold": "",
+          "queryRefusalResponse": ""
+        }
+      }
+    },
+    {
+      "operation": "upload_document",
+      "title": "Upload Document",
+      "description": "Upload document on Anything LLM server.",
+      "category": "investigation",
+      "annotation": "upload_document",
+      "parameters": [
+        {
+          "title": "Filepath or Record IRI",
+          "name": "file_type",
+          "description": "Filepath/Record IRI of the document file that you want to upload on Anything LLM server.",
+          "tooltip": "Filepath/Record IRI of the document file that you want to upload on Anything LLM server.",
+          "type": "select",
+          "options": [
+            "Filepath",
+            "Record IRI"
+          ],
+          "value": "Record IRI",
+          "visible": true,
+          "editable": true,
+          "required": true,
+          "onchange": {
+            "Filepath": [
+              {
+                "title": "Filepath",
+                "name": "file_name",
+                "type": "text",
+                "visible": true,
+                "editable": true,
+                "required": true,
+                "description": "File path on the filesystem. Note: Please set appropriate permissions to access input file.",
+                "tooltip": "File path on the filesystem. Note: Please set appropriate permissions to access input file.",
+                "placeholder": "Eg. /tmp/msg_file.msg"
+              }
+            ],
+            "Record IRI": [
+              {
+                "title": "Record IRI",
+                "name": "iri",
+                "description": "FortiSOAR™ IRI of the file. Note: The file that you want to upload on Anything LLM server must be part of the Attachment module in FortiSOAR™.",
+                "tooltip": "FortiSOAR™ IRI of the file. Note: The file that you want to upload on Anything LLM server must be part of the Attachment module in FortiSOAR™.",
+                "type": "text",
+                "visible": true,
+                "editable": true,
+                "required": true,
+                "placeholder": "Eg. /api/3/attachments/558c642f-79f0-45cd-be45-0d951495446c"
+              }
+            ]
+          }
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "success": "",
+        "error": "",
+        "documents": []
+      }
+    },
+    {
+      "operation": "upload_document_link",
+      "title": "Upload Document Link",
+      "description": "Uploads a web link to the custom-documents folder.",
+      "category": "investigation",
+      "annotation": "upload_document_link",
+      "parameters": [
+        {
+          "title": "Web Link",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "web_link",
+          "description": "Provide a web link to upload on AnythingLLM server.",
+          "tooltip": "Provide a web link to upload on AnythingLLM server."
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "success": "",
+        "error": "",
+        "documents": [
+          {
+            "id": "",
+            "url": "",
+            "title": "",
+            "docAuthor": "",
+            "description": "",
+            "docSource": "",
+            "chunkSource": "",
+            "published": "",
+            "wordCount": "",
+            "pageContent": "",
+            "token_count_estimate": "",
+            "location": ""
+          }
+        ]
+      }
+    },
+    {
+      "operation": "upload_document_text",
+      "title": "Upload Document Text",
+      "description": "Uploads a plain text to the custom-documents folder.",
+      "category": "investigation",
+      "annotation": "upload_document_text",
+      "parameters": [
+        {
+          "title": "Plain Text",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "plain_text",
+          "description": "Provide raw text content that is the document.",
+          "tooltip": "Provide raw text content that is the document."
+        },
+        {
+          "title": "Document Title",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "doc_title",
+          "description": "Provide document title to use when uploading.",
+          "tooltip": "Provide document title to use when uploading."
+        },
+        {
+          "title": "Description",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "description",
+          "description": "Provide description for the document.",
+          "tooltip": "Provide description for the document."
+        },
+        {
+          "title": "Author",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "author",
+          "description": "Provide author name for the document.",
+          "tooltip": "Provide author name for the document."
+        },
+        {
+          "title": "Source",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "source",
+          "description": "Provide source name for the document.",
+          "tooltip": "Provide source name for the document."
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "error": "",
+        "success": "",
+        "documents": [
+          {
+            "id": "",
+            "url": "",
+            "title": "",
+            "location": "",
+            "docAuthor": "",
+            "docSource": "",
+            "published": "",
+            "wordCount": "",
+            "chunkSource": "",
+            "description": "",
+            "pageContent": "",
+            "token_count_estimate": ""
+          }
+        ]
+      }
+    },
+    {
+      "operation": "create_workspace",
+      "title": "Create Workspace",
+      "description": "Create new workspace on AnythingLLM server.",
+      "category": "investigation",
+      "annotation": "create_workspace",
+      "parameters": [
+        {
+          "title": "Workspace Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "workspace_name",
+          "description": "Provide workspace name to create new workspace.",
+          "tooltip": "Provide workspace name to create new workspace."
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "workspace": {
+          "id": "",
+          "name": "",
+          "slug": "",
+          "createdAt": "",
+          "openAiTemp": "",
+          "lastUpdatedAt": "",
+          "openAiHistory": "",
+          "openAiPrompt": ""
+        },
+        "message": ""
+      }
+    },
+    {
+      "operation": "create_document_folder",
+      "title": "Create Folder in Documents",
+      "description": "Create a new folder inside the documents storage directory.",
+      "category": "investigation",
+      "annotation": "create_document_folder",
+      "parameters": [
+        {
+          "title": "Folder Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "folder_name",
+          "description": "Provide folder name to create into documents storage directory.",
+          "tooltip": "Provide folder name to create into documents storage directory."
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "message": "",
+        "success": ""
+      }
+    },
+    {
+      "operation": "update_workspace_settings",
+      "title": "Update Workspace Settings",
+      "description": "Update workspace settings which present on AnythingLLM server.",
+      "category": "investigation",
+      "annotation": "update_workspace_settings",
+      "parameters": [
+        {
+          "title": "Workspace Slug",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "workspace_name",
+          "description": "Provide Workspace Slug to update workspace details.",
+          "tooltip": "Provide Workspace Slug to update workspace details."
+        },
+        {
+          "title": "Workspace Settings",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "json",
+          "name": "settings_data",
+          "description": "Provide workspace settings to update workspace.",
+          "tooltip": "Provide workspace settings to update workspace."
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "workspace": {
+          "id": "",
+          "name": "",
+          "slug": "",
+          "createdAt": "",
+          "openAiTemp": "",
+          "lastUpdatedAt": "",
+          "openAiHistory": "",
+          "openAiPrompt": "",
+          "documents": []
+        },
+        "message": ""
+      }
+    },
+    {
+      "operation": "workspace_chat",
+      "title": "Workspace Chat",
+      "description": "Send a chat message to a workspace (default thread). Query mode is based on embedded documents in chat, whereas chat mode is more general",
+      "category": "investigation",
+      "annotation": "workspace_chat",
+      "parameters": [
+        {
+          "title": "Workspace Slug",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "workspace_name",
+          "description": "Provide Workspace Slug to chat with.",
+          "tooltip": "Provide Workspace Slug to chat with."
+        },
+        {
+          "title": "Massage to send",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "message",
+          "description": "Provide massage to send on workspace.",
+          "tooltip": "Provide massage to send on workspace."
+        },
+        {
+          "title": "Mode",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "select",
+          "options": [
+            "Query",
+            "Chat"
+          ],
+          "name": "mode",
+          "description": "Mode to chat, query or chat. Possible values are: query, chat.",
+          "tooltip": "Mode to chat, query or chat. Possible values are: query, chat."
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "id": "",
+        "type": "",
+        "close": "",
+        "error": "",
+        "chatId": "",
+        "sources": [],
+        "textResponse": ""
+      }
+    },
+    {
+      "operation": "move_document",
+      "title": "Move Document",
+      "description": "Move document within the documents storage directory.",
+      "category": "investigation",
+      "annotation": "move_document",
+      "parameters": [
+        {
+          "title": "Source Folder Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "src_folder_name",
+          "description": "Provide folder name to move file from directory.",
+          "tooltip": "Provide folder name to move file from directory."
+        },
+        {
+          "title": "Destination Folder Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "dest_folder_name",
+          "description": "Provide folder name to move file to directory.",
+          "tooltip": "Provide folder name to move file to directory."
+        },
+        {
+          "title": "Document Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "doc_name",
+          "description": "Provide the name of document to move from source directory to destination directory.",
+          "tooltip": "Provide the name of document to move from source directory to destination directory."
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "message": "",
+        "success": ""
+      }
+    },
+    {
+      "operation": "delete_document",
+      "title": "Delete Document",
+      "description": "Delete document permanently from AnythingLLM server.",
+      "category": "investigation",
+      "annotation": "delete_document",
+      "parameters": [
+        {
+          "title": "Folder Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "folder_name",
+          "description": "Provide folder name to delete file from directory.",
+          "tooltip": "Provide folder name to delete file from directory."
+        },
+        {
+          "title": "Document Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "doc_name",
+          "description": "Provide the name of document to delete from directory.",
+          "tooltip": "Provide the name of document to delete from directory."
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "message": "",
+        "success": ""
+      }
+    },
+    {
+      "operation": "delete_workspace_embedding",
+      "title": "Remove Workspace Embedding",
+      "description": "Remove a document embedding from the workspace",
+      "category": "investigation",
+      "annotation": "delete_workspace_embedding",
+      "parameters": [
+        {
+          "title": "Workspace Slug",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "workspace_name",
+          "description": "Provide Workspace Slug to remove a embedding the document.",
+          "tooltip": "Provide Workspace Slug to remove a embedding the document."
+        },
+        {
+          "title": "Folder Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "folder_name",
+          "description": "Provide folder name to remove document from directory.",
+          "tooltip": "Provide folder name to remove document from directory."
+        },
+        {
+          "title": "Document Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "doc_name",
+          "description": "Provide the name of document to remove embedding from provided directory.",
+          "tooltip": "Provide the name of document to remove embedding from provided directory."
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "workspace": {
+          "id": "",
+          "name": "",
+          "slug": "",
+          "topN": "",
+          "chatMode": "",
+          "chatModel": "",
+          "createdAt": "",
+          "documents": [
+            {
+              "id": "",
+              "docId": "",
+              "pinned": "",
+              "docpath": "",
+              "watched": "",
+              "filename": "",
+              "metadata": "",
+              "createdAt": "",
+              "workspaceId": "",
+              "lastUpdatedAt": ""
+            }
+          ],
+          "vectorTag": "",
+          "agentModel": "",
+          "openAiTemp": "",
+          "pfpFilename": "",
+          "chatProvider": "",
+          "openAiPrompt": "",
+          "agentProvider": "",
+          "lastUpdatedAt": "",
+          "openAiHistory": "",
+          "similarityThreshold": "",
+          "queryRefusalResponse": ""
+        }
+      }
+    }
+  ]
+}
