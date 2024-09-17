@@ -4,13 +4,13 @@
   "version": "1.0.0",
   "description": "This connector is providing automation actions for Anything LLM that supports using Retrieval Augmented Generation (RAG) with an LLM and user documents embedded in a vector DB. The LLM and vector DB can be fully local for maximum data privacy or configured to use cloud-based services such as OpenAI. A variety of LLMs and vector DBs are supported. Anything LLM itself can be installed on customer infrastructure or accessed as a cloud service.",
   "publisher": "Fortinet",
-  "cs_approved": true,
+  "cs_approved": false,
   "cs_compatible": true,
   "contributor": "",
   "category": "ML Service",
   "icon_small_name": "llm_small.png",
   "icon_large_name": "llm_large.png",
-  "help_online": "",
+  "help_online": "https://github.com/fortinet-fortisoar/connector-anything-llm/blob/release/1.0.0/docs/anything-llm.md",
   "configuration": {
     "fields": [
       {
@@ -49,7 +49,7 @@
   "operations": [
     {
       "operation": "get_documents",
-      "title": "Get List of All Documents",
+      "title": "Get Documents List",
       "description": "List of all document those are uploaded on server.",
       "category": "investigation",
       "annotation": "get_documents",
@@ -90,7 +90,7 @@
     },
     {
       "operation": "get_document",
-      "title": "Get Document",
+      "title": "Get Document by Name",
       "description": "Get document details by providing there name.",
       "category": "investigation",
       "annotation": "get_document",
@@ -127,7 +127,7 @@
     },
     {
       "operation": "get_workspace_list",
-      "title": "Get List of all Workspace",
+      "title": "Get Workspace List",
       "description": "Get list of all current workspace present on AnythingLLM server.",
       "category": "investigation",
       "annotation": "get_workspace_list",
@@ -160,7 +160,7 @@
     },
     {
       "operation": "get_workspace",
-      "title": "Get Workspace",
+      "title": "Get Workspace by Slug",
       "description": "Get workspace details by providing Workspace Slug.",
       "category": "investigation",
       "annotation": "get_workspace",
