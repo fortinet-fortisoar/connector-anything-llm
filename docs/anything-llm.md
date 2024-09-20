@@ -25,19 +25,19 @@ Certified: No
 For the procedure to configure a connector, click [here](https://docs.fortinet.com/document/fortisoar/0.0.0/configuring-a-connector/1/configuring-a-connector)
 ### Configuration parameters
 <p>In FortiSOAR&trade;, on the Connectors page, click the <strong>Anything LLM</strong> connector row (if you are in the <strong>Grid</strong> view on the Connectors page) and in the <strong>Configurations</strong> tab enter the required configuration details:</p>
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Server URL</td><td>Server URL to which you will connect and perform the automated operations.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Server URL</td><td>Specify the server URL to which you will connect and perform the automated operations.
 </td>
-</tr><tr><td>API Key</td><td>API key to access the Anything LLM server.
+</tr><tr><td>API Key</td><td>Specify the API key to access the Anything LLM server.
 </td>
 </tr><tr><td>Verify SSL</td><td>Specifies whether the SSL certificate for the server is to be verified or not. <br/>By default, this option is set to True.</td></tr>
 </tbody></table>
 
 ## Actions supported by the connector
 The following automated operations can be included in playbooks and you can also use the annotations to access operations:
-<table border=1><thead><tr><th>Function</th><th>Description</th><th>Annotation and Category</th></tr></thead><tbody><tr><td>Get Documents List</td><td>List of all document those are uploaded on server.</td><td>get_documents <br/>Investigation</td></tr>
-<tr><td>Get Document by Name</td><td>Get document details by providing there name.</td><td>get_document <br/>Investigation</td></tr>
-<tr><td>Get Workspace List</td><td>Get list of all current workspace present on AnythingLLM server.</td><td>get_workspace_list <br/>Investigation</td></tr>
-<tr><td>Get Workspace by Slug</td><td>Get workspace details by providing Workspace Slug.</td><td>get_workspace <br/>Investigation</td></tr>
+<table border=1><thead><tr><th>Function</th><th>Description</th><th>Annotation and Category</th></tr></thead><tbody><tr><td>Get Documents List</td><td>Retrieves a list of all document those are uploaded on server.</td><td>get_documents <br/>Investigation</td></tr>
+<tr><td>Get Document by Name</td><td>Retrieves a document details by providing there name.</td><td>get_document <br/>Investigation</td></tr>
+<tr><td>Get Workspace List</td><td>Retrieves a list of all current workspace present on AnythingLLM server.</td><td>get_workspace_list <br/>Investigation</td></tr>
+<tr><td>Get Workspace by Slug</td><td>Retrieves a workspace details by providing Workspace Slug.</td><td>get_workspace <br/>Investigation</td></tr>
 <tr><td>Add Workspace Embedding</td><td>Add a document to a workspace and create its vector embedding in the workspace.</td><td>add_workspace_embedding <br/>Investigation</td></tr>
 <tr><td>Upload Document</td><td>Upload document on Anything LLM server.</td><td>upload_document <br/>Investigation</td></tr>
 <tr><td>Upload Document Link</td><td>Uploads a web link to the custom-documents folder.</td><td>upload_document_link <br/>Investigation</td></tr>
@@ -91,7 +91,7 @@ The output contains the following populated JSON schema:
 }</pre>
 ### operation: Get Document by Name
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Document Name</td><td>Provide document name to get document details.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Document Name</td><td>Specify the document name to get document details.
 </td></tr></tbody></table>
 
 #### Output
@@ -146,7 +146,7 @@ The output contains the following populated JSON schema:
 }</pre>
 ### operation: Get Workspace by Slug
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Workspace Slug</td><td>Provide Workspace Slug to get workspace details.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Workspace Slug</td><td>Specify the Workspace Slug to get workspace details.
 </td></tr></tbody></table>
 
 #### Output
@@ -177,9 +177,9 @@ The output contains the following populated JSON schema:
 }</pre>
 ### operation: Add Workspace Embedding
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Workspace Slug</td><td>Provide Workspace Slug to embedding the document.
-</td></tr><tr><td>Folder Name</td><td>Provide folder name to add document from directory.
-</td></tr><tr><td>Document Name</td><td>Provide the name of document to add embedding from provided directory.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Workspace Slug</td><td>Specify the Workspace Slug to embedding the document.
+</td></tr><tr><td>Folder Name</td><td>Specify the folder name to add document from directory.
+</td></tr><tr><td>Document Name</td><td>Specify the name of document to add embedding from provided directory.
 </td></tr></tbody></table>
 
 #### Output
@@ -224,7 +224,7 @@ The output contains the following populated JSON schema:
 ### operation: Upload Document
 #### Input parameters
 <table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Filepath or Record IRI</td><td>Filepath/Record IRI of the document file that you want to upload on Anything LLM server.
-<br><strong>If you choose 'Filepath'</strong><ul><li>Filepath: File path on the filesystem. Note: Please set appropriate permissions to access input file.</li></ul><strong>If you choose 'Record IRI'</strong><ul><li>Record IRI: FortiSOAR™ IRI of the file. Note: The file that you want to upload on Anything LLM server must be part of the Attachment module in FortiSOAR™.</li></ul></td></tr></tbody></table>
+<br><strong>If you choose 'Filepath'</strong><ul><li>Filepath: Specify the file path on the filesystem. Note: Please set appropriate permissions to access input file.</li></ul><strong>If you choose 'Record IRI'</strong><ul><li>Record IRI: Specify the FortiSOAR™ IRI of the file. Note: The file that you want to upload on Anything LLM server must be part of the Attachment module in FortiSOAR™.</li></ul></td></tr></tbody></table>
 
 #### Output
 The output contains the following populated JSON schema:
@@ -236,7 +236,7 @@ The output contains the following populated JSON schema:
 }</pre>
 ### operation: Upload Document Link
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Web Link</td><td>Provide a web link to upload on AnythingLLM server.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Web Link</td><td>Specify the web link to upload on AnythingLLM server.
 </td></tr></tbody></table>
 
 #### Output
@@ -264,11 +264,11 @@ The output contains the following populated JSON schema:
 }</pre>
 ### operation: Upload Document Text
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Plain Text</td><td>Provide raw text content that is the document.
-</td></tr><tr><td>Document Title</td><td>Provide document title to use when uploading.
-</td></tr><tr><td>Description</td><td>Provide description for the document.
-</td></tr><tr><td>Author</td><td>Provide author name for the document.
-</td></tr><tr><td>Source</td><td>Provide source name for the document.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Plain Text</td><td>Specify the raw text content that is the document.
+</td></tr><tr><td>Document Title</td><td>Specify the document title to use when uploading.
+</td></tr><tr><td>Description</td><td>Specify the description for the document.
+</td></tr><tr><td>Author</td><td>Specify the author name for the document.
+</td></tr><tr><td>Source</td><td>Specify the source name for the document.
 </td></tr></tbody></table>
 
 #### Output
@@ -296,7 +296,7 @@ The output contains the following populated JSON schema:
 }</pre>
 ### operation: Create Workspace
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Workspace Name</td><td>Provide workspace name to create new workspace.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Workspace Name</td><td>Specify the workspace name to create new workspace.
 </td></tr></tbody></table>
 
 #### Output
@@ -317,7 +317,7 @@ The output contains the following populated JSON schema:
 }</pre>
 ### operation: Create Folder in Documents
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Folder Name</td><td>Provide folder name to create into documents storage directory.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Folder Name</td><td>Specify the folder name to create into documents storage directory.
 </td></tr></tbody></table>
 
 #### Output
@@ -329,8 +329,8 @@ The output contains the following populated JSON schema:
 }</pre>
 ### operation: Update Workspace Settings
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Workspace Slug</td><td>Provide Workspace Slug to update workspace details.
-</td></tr><tr><td>Workspace Settings</td><td>Provide workspace settings to update workspace.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Workspace Slug</td><td>Specify the Workspace Slug to update workspace details.
+</td></tr><tr><td>Workspace Settings</td><td>Specify the workspace settings to update workspace.
 </td></tr></tbody></table>
 
 #### Output
@@ -352,9 +352,9 @@ The output contains the following populated JSON schema:
 }</pre>
 ### operation: Workspace Chat
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Workspace Slug</td><td>Provide Workspace Slug to chat with.
-</td></tr><tr><td>Massage to send</td><td>Provide massage to send on workspace.
-</td></tr><tr><td>Mode</td><td>Mode to chat, query or chat. Possible values are: query, chat.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Workspace Slug</td><td>Specify the Workspace Slug to chat with.
+</td></tr><tr><td>Massage to send</td><td>Specify the massage to send on workspace.
+</td></tr><tr><td>Mode</td><td>Specify the mode to chat, query or chat. Possible values are: query, chat.
 </td></tr></tbody></table>
 
 #### Output
@@ -371,9 +371,9 @@ The output contains the following populated JSON schema:
 }</pre>
 ### operation: Move Document
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Source Folder Name</td><td>Provide folder name to move file from directory.
-</td></tr><tr><td>Destination Folder Name</td><td>Provide folder name to move file to directory.
-</td></tr><tr><td>Document Name</td><td>Provide the name of document to move from source directory to destination directory.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Source Folder Name</td><td>Specify the folder name to move file from directory.
+</td></tr><tr><td>Destination Folder Name</td><td>Specify the folder name to move file to directory.
+</td></tr><tr><td>Document Name</td><td>Specify the name of document to move from source directory to destination directory.
 </td></tr></tbody></table>
 
 #### Output
@@ -385,8 +385,8 @@ The output contains the following populated JSON schema:
 }</pre>
 ### operation: Delete Document
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Folder Name</td><td>Provide folder name to delete file from directory.
-</td></tr><tr><td>Document Name</td><td>Provide the name of document to delete from directory.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Folder Name</td><td>Specify the folder name to delete file from directory.
+</td></tr><tr><td>Document Name</td><td>Specify the name of document to delete from directory.
 </td></tr></tbody></table>
 
 #### Output
@@ -398,9 +398,9 @@ The output contains the following populated JSON schema:
 }</pre>
 ### operation: Remove Workspace Embedding
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Workspace Slug</td><td>Provide Workspace Slug to remove a embedding the document.
-</td></tr><tr><td>Folder Name</td><td>Provide folder name to remove document from directory.
-</td></tr><tr><td>Document Name</td><td>Provide the name of document to remove embedding from provided directory.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Workspace Slug</td><td>Specify the Workspace Slug to remove a embedding the document.
+</td></tr><tr><td>Folder Name</td><td>Specify the folder name to remove document from directory.
+</td></tr><tr><td>Document Name</td><td>Specify the name of document to remove embedding from provided directory.
 </td></tr></tbody></table>
 
 #### Output

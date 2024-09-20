@@ -2,22 +2,22 @@
   "type": "workflow_collections",
   "data": [
     {
-      "uuid": "6140da02-16be-4923-b80d-6b368fbe8c40",
+      "uuid": "df767d60-59ce-45c4-9c5e-c485d4af710f",
       "@type": "WorkflowCollection",
       "workflows": [
         {
           "@type": "Workflow",
-          "uuid": "9a521f48-ff41-441d-8f17-1d5b6ca318f6",
-          "collection": "/api/3/workflow_collections/6140da02-16be-4923-b80d-6b368fbe8c40",
+          "uuid": "b4006b39-3052-4a00-8ccb-41402bf57354",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "185e5142-c6a1-4a35-93e3-ed22f7755afb",
+              "uuid": "a4c31825-91ed-46f5-b7cd-4dc4b1e84ff9",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "df4dc92a-fa84-4d85-8b4d-8fbe5e945386",
+                "route": "0992708a-cbcb-402c-98be-a671a59901c0",
                 "title": "Anything LLM: Get Documents List",
                 "resources": [
                   "alerts"
@@ -37,7 +37,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "17649784-94d7-44e0-ab20-4830398cc9c2",
+              "uuid": "d28e6570-74c0-4f57-aee9-8f88f4c4a384",
               "@type": "WorkflowStep",
               "name": "Get Documents List",
               "description": null,
@@ -60,7 +60,7 @@
             }
           ],
           "triggerLimit": null,
-          "description": "List of all document those are uploaded on server.",
+          "description": "Retrieves a list of all document those are uploaded on server.",
           "name": "Get Documents List",
           "tag": "#Anything LLM",
           "recordTags": [
@@ -72,32 +72,32 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/185e5142-c6a1-4a35-93e3-ed22f7755afb",
+          "triggerStep": "/api/3/workflow_steps/a4c31825-91ed-46f5-b7cd-4dc4b1e84ff9",
           "routes": [
             {
-              "uuid": "77770128-6b44-4cb4-a800-c1b01fbf17ed",
+              "uuid": "7b4bbc3b-f451-46ea-ba70-02dcd68aaca8",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Documents List",
-              "sourceStep": "/api/3/workflow_steps/185e5142-c6a1-4a35-93e3-ed22f7755afb",
-              "targetStep": "/api/3/workflow_steps/17649784-94d7-44e0-ab20-4830398cc9c2"
+              "sourceStep": "/api/3/workflow_steps/a4c31825-91ed-46f5-b7cd-4dc4b1e84ff9",
+              "targetStep": "/api/3/workflow_steps/d28e6570-74c0-4f57-aee9-8f88f4c4a384"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "cbf93dd4-ac0f-4de3-b7a8-29d5bd4143a4",
-          "collection": "/api/3/workflow_collections/6140da02-16be-4923-b80d-6b368fbe8c40",
+          "uuid": "db29ab98-93f0-4069-8a06-cd3f9e2eb0e8",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "178140c0-a2e5-4a0e-b726-cb19309e1ac7",
+              "uuid": "1c394a57-9973-42bc-9976-04890e7536db",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "fc544559-6084-4946-8106-117a4bb2e10a",
+                "route": "f6f70149-7d8a-48c4-8734-9037a99d0720",
                 "title": "Anything LLM: Get Document by Name",
                 "resources": [
                   "alerts"
@@ -117,7 +117,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "4eaa87ac-b3a7-4c71-82f9-d7054ff388b0",
+              "uuid": "377a5559-0fe1-4d40-817f-4e4c4318a4e2",
               "@type": "WorkflowStep",
               "name": "Get Document by Name",
               "description": null,
@@ -142,7 +142,7 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Get document details by providing there name.",
+          "description": "Retrieves a document details by providing there name.",
           "name": "Get Document by Name",
           "tag": "#Anything LLM",
           "recordTags": [
@@ -154,32 +154,32 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/178140c0-a2e5-4a0e-b726-cb19309e1ac7",
+          "triggerStep": "/api/3/workflow_steps/1c394a57-9973-42bc-9976-04890e7536db",
           "routes": [
             {
-              "uuid": "6b59f5b7-dfe6-47b7-b055-5c79981833a2",
+              "uuid": "6a53654d-f001-4bd6-9c18-553ab2dc3285",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Document by Name",
-              "sourceStep": "/api/3/workflow_steps/178140c0-a2e5-4a0e-b726-cb19309e1ac7",
-              "targetStep": "/api/3/workflow_steps/4eaa87ac-b3a7-4c71-82f9-d7054ff388b0"
+              "sourceStep": "/api/3/workflow_steps/1c394a57-9973-42bc-9976-04890e7536db",
+              "targetStep": "/api/3/workflow_steps/377a5559-0fe1-4d40-817f-4e4c4318a4e2"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "ce171202-0995-47e5-ad00-f8a559226354",
-          "collection": "/api/3/workflow_collections/6140da02-16be-4923-b80d-6b368fbe8c40",
+          "uuid": "e1b4b303-a891-45d3-bc91-2c2ed9d7881a",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "c51d126b-e30d-4695-9249-c6d72a90c3f4",
+              "uuid": "0370b58b-0151-4063-8800-dd35c66732d0",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "4e79b490-ba29-4c0d-ad54-4d1a051da09f",
+                "route": "2f86837e-8eb0-414f-b43f-bbe7b5e20393",
                 "title": "Anything LLM: Get Workspace List",
                 "resources": [
                   "alerts"
@@ -199,7 +199,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "bf65cb4a-69ec-4e2f-bc23-d9c4abbf8f15",
+              "uuid": "c1daf9f7-f3fc-4c6a-8e60-d0ba498958c8",
               "@type": "WorkflowStep",
               "name": "Get Workspace List",
               "description": null,
@@ -222,7 +222,7 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Get list of all current workspace present on AnythingLLM server.",
+          "description": "Retrieves a list of all current workspace present on AnythingLLM server.",
           "name": "Get Workspace List",
           "tag": "#Anything LLM",
           "recordTags": [
@@ -234,32 +234,32 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/c51d126b-e30d-4695-9249-c6d72a90c3f4",
+          "triggerStep": "/api/3/workflow_steps/0370b58b-0151-4063-8800-dd35c66732d0",
           "routes": [
             {
-              "uuid": "e3aff645-4adc-419e-a9b9-4275a7298b2f",
+              "uuid": "ee258f5b-f8ed-471b-9c84-79f947056be2",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Workspace List",
-              "sourceStep": "/api/3/workflow_steps/c51d126b-e30d-4695-9249-c6d72a90c3f4",
-              "targetStep": "/api/3/workflow_steps/bf65cb4a-69ec-4e2f-bc23-d9c4abbf8f15"
+              "sourceStep": "/api/3/workflow_steps/0370b58b-0151-4063-8800-dd35c66732d0",
+              "targetStep": "/api/3/workflow_steps/c1daf9f7-f3fc-4c6a-8e60-d0ba498958c8"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "fa94f7ee-7a76-48a2-ae73-c26d6d44d4fd",
-          "collection": "/api/3/workflow_collections/6140da02-16be-4923-b80d-6b368fbe8c40",
+          "uuid": "50d81d80-30dc-43f8-9db2-5a3b77790f83",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "7fa9e487-2066-4919-9950-3859b2b50f05",
+              "uuid": "86977850-e6d7-4e96-a45f-a0eacd4a454e",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "97e797bf-560a-40af-a096-c86ee1e688f5",
+                "route": "5e7d7cbf-2826-441c-9e7d-447372e842e5",
                 "title": "Anything LLM: Get Workspace by Slug",
                 "resources": [
                   "alerts"
@@ -279,7 +279,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "ef8abe9c-33ce-436f-b7b1-1893abdcc67c",
+              "uuid": "76d966ba-f876-42b8-b867-3d4f3007366b",
               "@type": "WorkflowStep",
               "name": "Get Workspace by Slug",
               "description": null,
@@ -304,7 +304,7 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Get workspace details by providing Workspace Slug.",
+          "description": "Retrieves a workspace details by providing Workspace Slug.",
           "name": "Get Workspace by Slug",
           "tag": "#Anything LLM",
           "recordTags": [
@@ -316,32 +316,32 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/7fa9e487-2066-4919-9950-3859b2b50f05",
+          "triggerStep": "/api/3/workflow_steps/86977850-e6d7-4e96-a45f-a0eacd4a454e",
           "routes": [
             {
-              "uuid": "9d943b96-2214-426b-bbe9-c8a432e1b227",
+              "uuid": "61cee5a3-f6f3-4b3f-b223-739533a1b2ce",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Workspace by Slug",
-              "sourceStep": "/api/3/workflow_steps/7fa9e487-2066-4919-9950-3859b2b50f05",
-              "targetStep": "/api/3/workflow_steps/ef8abe9c-33ce-436f-b7b1-1893abdcc67c"
+              "sourceStep": "/api/3/workflow_steps/86977850-e6d7-4e96-a45f-a0eacd4a454e",
+              "targetStep": "/api/3/workflow_steps/76d966ba-f876-42b8-b867-3d4f3007366b"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "d08a5284-b90f-4132-b7ea-6dcef12a903e",
-          "collection": "/api/3/workflow_collections/6140da02-16be-4923-b80d-6b368fbe8c40",
+          "uuid": "0bdbe0be-04f4-4b38-bca9-76c2f1d9e029",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "4411110d-051d-4697-8e7e-5f540b2317ca",
+              "uuid": "beb2f3e5-27a1-4622-b1d3-6261321913c2",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "c33a3f94-b589-42ab-aca5-d87e4b67ea5b",
+                "route": "eef8e830-bb8d-43aa-9610-f55c86331ad6",
                 "title": "Anything LLM: Add Workspace Embedding",
                 "resources": [
                   "alerts"
@@ -361,7 +361,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "53580cea-1509-48d9-a4fa-b45d4b6d3c38",
+              "uuid": "f68e39e6-921d-4740-8bd4-76bb20d5ab33",
               "@type": "WorkflowStep",
               "name": "Add Workspace Embedding",
               "description": null,
@@ -400,32 +400,32 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/4411110d-051d-4697-8e7e-5f540b2317ca",
+          "triggerStep": "/api/3/workflow_steps/beb2f3e5-27a1-4622-b1d3-6261321913c2",
           "routes": [
             {
-              "uuid": "7c796662-b9c6-447a-9be7-096204eb37f8",
+              "uuid": "c4ce6581-5a53-45fd-a868-b60f76b03553",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Add Workspace Embedding",
-              "sourceStep": "/api/3/workflow_steps/4411110d-051d-4697-8e7e-5f540b2317ca",
-              "targetStep": "/api/3/workflow_steps/53580cea-1509-48d9-a4fa-b45d4b6d3c38"
+              "sourceStep": "/api/3/workflow_steps/beb2f3e5-27a1-4622-b1d3-6261321913c2",
+              "targetStep": "/api/3/workflow_steps/f68e39e6-921d-4740-8bd4-76bb20d5ab33"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "c94cdbf0-49c7-4035-83df-d733ac8a8982",
-          "collection": "/api/3/workflow_collections/6140da02-16be-4923-b80d-6b368fbe8c40",
+          "uuid": "fb454f74-30c6-44d7-b86d-42adae9751b7",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "e7282d92-794a-4b11-81e4-aff96c46c2ab",
+              "uuid": "c3646b1b-8fde-45a9-86de-f9102c715535",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "e5e7083e-891d-40f6-a272-9f54b90c89f9",
+                "route": "0f310823-a9d1-4fea-a315-d309e5bb3a94",
                 "title": "Anything LLM: Upload Document",
                 "resources": [
                   "alerts"
@@ -445,7 +445,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "826db419-a206-4c76-a01f-e4a8294be532",
+              "uuid": "3b48f2d0-d969-466d-b584-6bf5ab093a38",
               "@type": "WorkflowStep",
               "name": "Upload Document",
               "description": null,
@@ -482,32 +482,32 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/e7282d92-794a-4b11-81e4-aff96c46c2ab",
+          "triggerStep": "/api/3/workflow_steps/c3646b1b-8fde-45a9-86de-f9102c715535",
           "routes": [
             {
-              "uuid": "5fdda06e-a7fd-4e1c-80d5-3155f0941e42",
+              "uuid": "faed2ff7-c5be-4534-b0fb-a54b21c01024",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Upload Document",
-              "sourceStep": "/api/3/workflow_steps/e7282d92-794a-4b11-81e4-aff96c46c2ab",
-              "targetStep": "/api/3/workflow_steps/826db419-a206-4c76-a01f-e4a8294be532"
+              "sourceStep": "/api/3/workflow_steps/c3646b1b-8fde-45a9-86de-f9102c715535",
+              "targetStep": "/api/3/workflow_steps/3b48f2d0-d969-466d-b584-6bf5ab093a38"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "71e0146f-3882-42f5-a9d2-f66b408333de",
-          "collection": "/api/3/workflow_collections/6140da02-16be-4923-b80d-6b368fbe8c40",
+          "uuid": "438150ff-7f4d-4523-8abd-e76352569c76",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "3141561f-2ac2-421f-ac83-1c8130dc26ea",
+              "uuid": "3beb0609-c307-4429-be55-4d7835aa1c24",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "ec51ed9e-d5b6-4f34-9923-17219519ce5d",
+                "route": "7121917b-fd20-44b5-9b20-ddf64d8850ea",
                 "title": "Anything LLM: Upload Document Link",
                 "resources": [
                   "alerts"
@@ -527,7 +527,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "db6e3119-c1d1-43e5-af84-c01253b4d996",
+              "uuid": "fe36b5e5-400b-4b36-8efc-f068166ff01f",
               "@type": "WorkflowStep",
               "name": "Upload Document Link",
               "description": null,
@@ -564,32 +564,32 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/3141561f-2ac2-421f-ac83-1c8130dc26ea",
+          "triggerStep": "/api/3/workflow_steps/3beb0609-c307-4429-be55-4d7835aa1c24",
           "routes": [
             {
-              "uuid": "8e4975d9-0f7d-4918-adf0-ee5b0a60c967",
+              "uuid": "8b64d823-eeb2-4983-97c7-2f15760c7376",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Upload Document Link",
-              "sourceStep": "/api/3/workflow_steps/3141561f-2ac2-421f-ac83-1c8130dc26ea",
-              "targetStep": "/api/3/workflow_steps/db6e3119-c1d1-43e5-af84-c01253b4d996"
+              "sourceStep": "/api/3/workflow_steps/3beb0609-c307-4429-be55-4d7835aa1c24",
+              "targetStep": "/api/3/workflow_steps/fe36b5e5-400b-4b36-8efc-f068166ff01f"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "bc4a2ca6-dd3d-41a9-af5e-851613bcc85f",
-          "collection": "/api/3/workflow_collections/6140da02-16be-4923-b80d-6b368fbe8c40",
+          "uuid": "d2e51f0b-848f-4ab9-bec5-3c8569770169",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "8c6a4de8-6edc-4d27-921e-929f0240722e",
+              "uuid": "e7b28dad-02fe-4265-9078-55ea385fe1ed",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "fff9f941-587d-4d0c-a33b-5f371543710d",
+                "route": "9b9ce806-3e05-4895-a4d4-6e97a8ab1f43",
                 "title": "Anything LLM: Upload Document Text",
                 "resources": [
                   "alerts"
@@ -609,7 +609,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "4d67bb58-c740-419f-981c-fbe4634f684b",
+              "uuid": "fce85de7-5530-48cd-8028-d4d93a2ec0a8",
               "@type": "WorkflowStep",
               "name": "Upload Document Text",
               "description": null,
@@ -650,32 +650,32 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/8c6a4de8-6edc-4d27-921e-929f0240722e",
+          "triggerStep": "/api/3/workflow_steps/e7b28dad-02fe-4265-9078-55ea385fe1ed",
           "routes": [
             {
-              "uuid": "87f25f64-781f-426a-8acc-cd5727277c24",
+              "uuid": "c2ee2ea9-b0ea-4a5b-b617-28467976ddf6",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Upload Document Text",
-              "sourceStep": "/api/3/workflow_steps/8c6a4de8-6edc-4d27-921e-929f0240722e",
-              "targetStep": "/api/3/workflow_steps/4d67bb58-c740-419f-981c-fbe4634f684b"
+              "sourceStep": "/api/3/workflow_steps/e7b28dad-02fe-4265-9078-55ea385fe1ed",
+              "targetStep": "/api/3/workflow_steps/fce85de7-5530-48cd-8028-d4d93a2ec0a8"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "d569dee4-61ea-4089-8d74-ffa059f27373",
-          "collection": "/api/3/workflow_collections/6140da02-16be-4923-b80d-6b368fbe8c40",
+          "uuid": "01df408e-be10-46ce-990e-8fcbacd18ea3",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "d3275fe3-63ec-4152-80f9-e0c82f498cf6",
+              "uuid": "19075c05-e11f-4b45-91c2-6e99cbe4bf21",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "43cf3826-43f4-40ba-9e38-2b2a771dccbb",
+                "route": "a60a82bc-85e0-4be5-a75a-3b47feea0ba9",
                 "title": "Anything LLM: Create Workspace",
                 "resources": [
                   "alerts"
@@ -695,7 +695,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "29a067df-57b0-42d5-a0f2-4943e15a8ec5",
+              "uuid": "39a07570-8da1-4b2c-b146-1d4ae9e4cd31",
               "@type": "WorkflowStep",
               "name": "Create Workspace",
               "description": null,
@@ -732,32 +732,32 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/d3275fe3-63ec-4152-80f9-e0c82f498cf6",
+          "triggerStep": "/api/3/workflow_steps/19075c05-e11f-4b45-91c2-6e99cbe4bf21",
           "routes": [
             {
-              "uuid": "739baf2a-e0fe-4a6e-9ab8-e9de84bd9d6c",
+              "uuid": "de45e79f-a5af-4458-90d2-849e96d2596f",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Create Workspace",
-              "sourceStep": "/api/3/workflow_steps/d3275fe3-63ec-4152-80f9-e0c82f498cf6",
-              "targetStep": "/api/3/workflow_steps/29a067df-57b0-42d5-a0f2-4943e15a8ec5"
+              "sourceStep": "/api/3/workflow_steps/19075c05-e11f-4b45-91c2-6e99cbe4bf21",
+              "targetStep": "/api/3/workflow_steps/39a07570-8da1-4b2c-b146-1d4ae9e4cd31"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "620751c9-358c-4d06-a7e1-016243dac1c4",
-          "collection": "/api/3/workflow_collections/6140da02-16be-4923-b80d-6b368fbe8c40",
+          "uuid": "bb7b7c02-53f7-4ecb-9a21-f6922641adca",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "5bbe8451-9895-4252-be3a-3f7c10ef15ce",
+              "uuid": "90bc156a-6f32-4ee5-a1b3-9f10c687c726",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "753d5100-4534-4068-a055-9a7673c7dc4a",
+                "route": "c81a4d03-196b-4669-9bbf-61f3ec0db5aa",
                 "title": "Anything LLM: Create Folder in Documents",
                 "resources": [
                   "alerts"
@@ -777,7 +777,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "4c8f8c4d-b142-4f6b-b128-26d301f57639",
+              "uuid": "6c2b78cf-91d7-4609-be41-612b00861368",
               "@type": "WorkflowStep",
               "name": "Create Folder in Documents",
               "description": null,
@@ -814,32 +814,32 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/5bbe8451-9895-4252-be3a-3f7c10ef15ce",
+          "triggerStep": "/api/3/workflow_steps/90bc156a-6f32-4ee5-a1b3-9f10c687c726",
           "routes": [
             {
-              "uuid": "f1477254-f540-40d3-b969-584cf40b8f0e",
+              "uuid": "05f8282e-0eae-445a-b337-10bab080f8e4",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Create Folder in Documents",
-              "sourceStep": "/api/3/workflow_steps/5bbe8451-9895-4252-be3a-3f7c10ef15ce",
-              "targetStep": "/api/3/workflow_steps/4c8f8c4d-b142-4f6b-b128-26d301f57639"
+              "sourceStep": "/api/3/workflow_steps/90bc156a-6f32-4ee5-a1b3-9f10c687c726",
+              "targetStep": "/api/3/workflow_steps/6c2b78cf-91d7-4609-be41-612b00861368"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "cf1912c3-8ddf-4992-b41a-a846cc740bd8",
-          "collection": "/api/3/workflow_collections/6140da02-16be-4923-b80d-6b368fbe8c40",
+          "uuid": "05b3d921-d743-49e3-804d-2cddccb3243c",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "85f998e1-0115-4f97-b3d5-b9285509960d",
+              "uuid": "538849cd-453b-49d7-8d42-b5161a471516",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "d61d2e6b-d4ef-4839-9a06-953905cc89e9",
+                "route": "e2625f1a-c71d-49ec-8a35-0b252e4e6ebe",
                 "title": "Anything LLM: Update Workspace Settings",
                 "resources": [
                   "alerts"
@@ -859,7 +859,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "49bf1149-622b-4b32-80e8-9ba21d23d60e",
+              "uuid": "2620a2e3-4ce2-48c6-a968-a51292f47048",
               "@type": "WorkflowStep",
               "name": "Update Workspace Settings",
               "description": null,
@@ -897,32 +897,32 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/85f998e1-0115-4f97-b3d5-b9285509960d",
+          "triggerStep": "/api/3/workflow_steps/538849cd-453b-49d7-8d42-b5161a471516",
           "routes": [
             {
-              "uuid": "2d189159-2a25-4bec-9531-9bf154e0622b",
+              "uuid": "29ccbcb6-bb86-4acf-8673-fe99f4a31ded",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Update Workspace Settings",
-              "sourceStep": "/api/3/workflow_steps/85f998e1-0115-4f97-b3d5-b9285509960d",
-              "targetStep": "/api/3/workflow_steps/49bf1149-622b-4b32-80e8-9ba21d23d60e"
+              "sourceStep": "/api/3/workflow_steps/538849cd-453b-49d7-8d42-b5161a471516",
+              "targetStep": "/api/3/workflow_steps/2620a2e3-4ce2-48c6-a968-a51292f47048"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "26cbe068-bf02-4466-9452-4eb769cf1739",
-          "collection": "/api/3/workflow_collections/6140da02-16be-4923-b80d-6b368fbe8c40",
+          "uuid": "520e4c01-86d3-4120-be1d-a36f4311c432",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "f11a6ab7-b0f3-436a-86e6-3a4593482c10",
+              "uuid": "45ebc90a-ef16-4317-a833-8e7a85f47ce6",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "64a3699e-2b91-4d11-a1eb-75da6cb84028",
+                "route": "a18cacc4-b443-427f-ab0b-3185cdbcc301",
                 "title": "Anything LLM: Workspace Chat",
                 "resources": [
                   "alerts"
@@ -942,7 +942,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "b0f50617-9969-4ed4-b3d5-aa69a2333199",
+              "uuid": "d7d679c2-0445-4b3b-8764-b96c40f4750c",
               "@type": "WorkflowStep",
               "name": "Workspace Chat",
               "description": null,
@@ -981,32 +981,32 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/f11a6ab7-b0f3-436a-86e6-3a4593482c10",
+          "triggerStep": "/api/3/workflow_steps/45ebc90a-ef16-4317-a833-8e7a85f47ce6",
           "routes": [
             {
-              "uuid": "ccc523ee-146d-4a57-ab15-22f7d64498ba",
+              "uuid": "add724c4-032b-432a-bcd5-ee7383c6aa8b",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Workspace Chat",
-              "sourceStep": "/api/3/workflow_steps/f11a6ab7-b0f3-436a-86e6-3a4593482c10",
-              "targetStep": "/api/3/workflow_steps/b0f50617-9969-4ed4-b3d5-aa69a2333199"
+              "sourceStep": "/api/3/workflow_steps/45ebc90a-ef16-4317-a833-8e7a85f47ce6",
+              "targetStep": "/api/3/workflow_steps/d7d679c2-0445-4b3b-8764-b96c40f4750c"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "7637551e-bc5f-4637-be5d-54a584f42219",
-          "collection": "/api/3/workflow_collections/6140da02-16be-4923-b80d-6b368fbe8c40",
+          "uuid": "5e8bf277-063a-4366-842b-93296716f549",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "1686e809-49be-45f2-96d8-7f85683bc89b",
+              "uuid": "b84735f1-39b1-437a-a17b-03aa055fb60f",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "b3a1092a-5b78-4ef7-8e26-6f80dcf60aac",
+                "route": "fcd86355-b6b0-44e8-800c-d726f814be6e",
                 "title": "Anything LLM: Move Document",
                 "resources": [
                   "alerts"
@@ -1026,7 +1026,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "216402a7-2e46-478c-ae07-8b9ae54bcf05",
+              "uuid": "15ed5855-a51b-4d68-bd75-2c47b4074443",
               "@type": "WorkflowStep",
               "name": "Move Document",
               "description": null,
@@ -1065,32 +1065,32 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/1686e809-49be-45f2-96d8-7f85683bc89b",
+          "triggerStep": "/api/3/workflow_steps/b84735f1-39b1-437a-a17b-03aa055fb60f",
           "routes": [
             {
-              "uuid": "61ec6b00-c1d8-4f16-bf72-add5f419649f",
+              "uuid": "a0abb5ab-9a3e-4bdd-ab9d-035d702b84bb",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Move Document",
-              "sourceStep": "/api/3/workflow_steps/1686e809-49be-45f2-96d8-7f85683bc89b",
-              "targetStep": "/api/3/workflow_steps/216402a7-2e46-478c-ae07-8b9ae54bcf05"
+              "sourceStep": "/api/3/workflow_steps/b84735f1-39b1-437a-a17b-03aa055fb60f",
+              "targetStep": "/api/3/workflow_steps/15ed5855-a51b-4d68-bd75-2c47b4074443"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "51af3c42-1550-4f44-a93d-94cedbb5c546",
-          "collection": "/api/3/workflow_collections/6140da02-16be-4923-b80d-6b368fbe8c40",
+          "uuid": "13584e16-e07d-4c1e-931c-103834793b71",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "5929be7f-40a0-4df0-9651-40a42f4041e0",
+              "uuid": "9ae0816a-40e6-4c3e-be5d-f3a38ced8187",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "c542df34-a595-4c40-88f6-b040c5eeb9bb",
+                "route": "c9fe43b0-25f3-412a-8e59-531c067da7f2",
                 "title": "Anything LLM: Delete Document",
                 "resources": [
                   "alerts"
@@ -1110,7 +1110,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "5c0a58e9-41f5-4d78-a52e-2846575d07dd",
+              "uuid": "bc16821a-8a65-411c-84f8-5a8190ed0e08",
               "@type": "WorkflowStep",
               "name": "Delete Document",
               "description": null,
@@ -1148,32 +1148,32 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/5929be7f-40a0-4df0-9651-40a42f4041e0",
+          "triggerStep": "/api/3/workflow_steps/9ae0816a-40e6-4c3e-be5d-f3a38ced8187",
           "routes": [
             {
-              "uuid": "34615f6d-653f-479f-8291-e863fafe3813",
+              "uuid": "3baf50ef-8936-414e-9dbb-12635aeb82bc",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Delete Document",
-              "sourceStep": "/api/3/workflow_steps/5929be7f-40a0-4df0-9651-40a42f4041e0",
-              "targetStep": "/api/3/workflow_steps/5c0a58e9-41f5-4d78-a52e-2846575d07dd"
+              "sourceStep": "/api/3/workflow_steps/9ae0816a-40e6-4c3e-be5d-f3a38ced8187",
+              "targetStep": "/api/3/workflow_steps/bc16821a-8a65-411c-84f8-5a8190ed0e08"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "a3ed7ff7-49ff-4db8-9f60-0e9216247792",
-          "collection": "/api/3/workflow_collections/6140da02-16be-4923-b80d-6b368fbe8c40",
+          "uuid": "0728d493-19b5-4a4f-ae3b-d900e1813125",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "e7706eab-7306-42f2-9c4e-e40c7fe1156d",
+              "uuid": "dc3a269b-bba7-4425-8538-9f7f84f5d339",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "3128f055-7d19-49b5-9cd8-1a71a4f05338",
+                "route": "d52e5405-1a24-4f78-a8ae-6db845aa4b8a",
                 "title": "Anything LLM: Remove Workspace Embedding",
                 "resources": [
                   "alerts"
@@ -1193,7 +1193,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "31733400-5ed8-4679-a987-3828706d18af",
+              "uuid": "079561ab-d4f0-42c8-b718-04a1286bb60e",
               "@type": "WorkflowStep",
               "name": "Remove Workspace Embedding",
               "description": null,
@@ -1232,16 +1232,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/e7706eab-7306-42f2-9c4e-e40c7fe1156d",
+          "triggerStep": "/api/3/workflow_steps/dc3a269b-bba7-4425-8538-9f7f84f5d339",
           "routes": [
             {
-              "uuid": "902fb459-78e5-49ef-89eb-1f3349f80c69",
+              "uuid": "85acb1a6-03bb-4743-9993-7be044238936",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Remove Workspace Embedding",
-              "sourceStep": "/api/3/workflow_steps/e7706eab-7306-42f2-9c4e-e40c7fe1156d",
-              "targetStep": "/api/3/workflow_steps/31733400-5ed8-4679-a987-3828706d18af"
+              "sourceStep": "/api/3/workflow_steps/dc3a269b-bba7-4425-8538-9f7f84f5d339",
+              "targetStep": "/api/3/workflow_steps/079561ab-d4f0-42c8-b718-04a1286bb60e"
             }
           ]
         }

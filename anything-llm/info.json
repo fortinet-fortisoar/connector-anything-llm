@@ -20,8 +20,8 @@
         "visible": true,
         "type": "text",
         "name": "server_url",
-        "description": "Server URL to which you will connect and perform the automated operations.",
-        "tooltip": "Server URL to which you will connect and perform the automated operations."
+        "description": "Specify the server URL to which you will connect and perform the automated operations.",
+        "tooltip": "Specify the server URL to which you will connect and perform the automated operations."
       },
       {
         "title": "API Key",
@@ -30,8 +30,8 @@
         "visible": true,
         "type": "password",
         "name": "api_key",
-        "description": "API key to access the Anything LLM server.",
-        "tooltip": "API key to access the Anything LLM server."
+        "description": "Specify the API key to access the Anything LLM server.",
+        "tooltip": "Specify the API key to access the Anything LLM server."
       },
       {
         "title": "Verify SSL",
@@ -50,7 +50,7 @@
     {
       "operation": "get_documents",
       "title": "Get Documents List",
-      "description": "List of all document those are uploaded on server.",
+      "description": "Retrieves a list of all document those are uploaded on server.",
       "category": "investigation",
       "annotation": "get_documents",
       "parameters": [],
@@ -91,7 +91,7 @@
     {
       "operation": "get_document",
       "title": "Get Document by Name",
-      "description": "Get document details by providing there name.",
+      "description": "Retrieves a document details by providing there name.",
       "category": "investigation",
       "annotation": "get_document",
       "parameters": [
@@ -102,8 +102,8 @@
           "visible": true,
           "type": "text",
           "name": "doc_name",
-          "description": "Provide document name to get document details.",
-          "tooltip": "Provide document name to get document details."
+          "description": "Specify the document name to get document details.",
+          "tooltip": "Specify the document name to get document details."
         }
       ],
       "enabled": true,
@@ -128,7 +128,7 @@
     {
       "operation": "get_workspace_list",
       "title": "Get Workspace List",
-      "description": "Get list of all current workspace present on AnythingLLM server.",
+      "description": "Retrieves a list of all current workspace present on AnythingLLM server.",
       "category": "investigation",
       "annotation": "get_workspace_list",
       "parameters": [],
@@ -161,7 +161,7 @@
     {
       "operation": "get_workspace",
       "title": "Get Workspace by Slug",
-      "description": "Get workspace details by providing Workspace Slug.",
+      "description": "Retrieves a workspace details by providing Workspace Slug.",
       "category": "investigation",
       "annotation": "get_workspace",
       "parameters": [
@@ -172,8 +172,8 @@
           "visible": true,
           "type": "text",
           "name": "workspace_name",
-          "description": "Provide Workspace Slug to get workspace details.",
-          "tooltip": "Provide Workspace Slug to get workspace details."
+          "description": "Specify the Workspace Slug to get workspace details.",
+          "tooltip": "Specify the Workspace Slug to get workspace details."
         }
       ],
       "enabled": true,
@@ -215,8 +215,8 @@
           "visible": true,
           "type": "text",
           "name": "workspace_name",
-          "description": "Provide Workspace Slug to embedding the document.",
-          "tooltip": "Provide Workspace Slug to embedding the document."
+          "description": "Specify the Workspace Slug to embedding the document.",
+          "tooltip": "Specify the Workspace Slug to embedding the document."
         },
         {
           "title": "Folder Name",
@@ -225,8 +225,8 @@
           "visible": true,
           "type": "text",
           "name": "folder_name",
-          "description": "Provide folder name to add document from directory.",
-          "tooltip": "Provide folder name to add document from directory."
+          "description": "Specify the folder name to add document from directory.",
+          "tooltip": "Specify the folder name to add document from directory."
         },
         {
           "title": "Document Name",
@@ -235,8 +235,8 @@
           "visible": true,
           "type": "text",
           "name": "doc_name",
-          "description": "Provide the name of document to add embedding from provided directory.",
-          "tooltip": "Provide the name of document to add embedding from provided directory."
+          "description": "Specify the name of document to add embedding from provided directory.",
+          "tooltip": "Specify the name of document to add embedding from provided directory."
         }
       ],
       "enabled": true,
@@ -307,8 +307,8 @@
                 "visible": true,
                 "editable": true,
                 "required": true,
-                "description": "File path on the filesystem. Note: Please set appropriate permissions to access input file.",
-                "tooltip": "File path on the filesystem. Note: Please set appropriate permissions to access input file.",
+                "description": "Specify the file path on the filesystem. Note: Please set appropriate permissions to access input file.",
+                "tooltip": "Specify the file path on the filesystem. Note: Please set appropriate permissions to access input file.",
                 "placeholder": "Eg. /tmp/msg_file.msg"
               }
             ],
@@ -316,8 +316,8 @@
               {
                 "title": "Record IRI",
                 "name": "iri",
-                "description": "FortiSOAR™ IRI of the file. Note: The file that you want to upload on Anything LLM server must be part of the Attachment module in FortiSOAR™.",
-                "tooltip": "FortiSOAR™ IRI of the file. Note: The file that you want to upload on Anything LLM server must be part of the Attachment module in FortiSOAR™.",
+                "description": "Specify the FortiSOAR™ IRI of the file. Note: The file that you want to upload on Anything LLM server must be part of the Attachment module in FortiSOAR™.",
+                "tooltip": "Specify the FortiSOAR™ IRI of the file. Note: The file that you want to upload on Anything LLM server must be part of the Attachment module in FortiSOAR™.",
                 "type": "text",
                 "visible": true,
                 "editable": true,
@@ -349,8 +349,8 @@
           "visible": true,
           "type": "text",
           "name": "web_link",
-          "description": "Provide a web link to upload on AnythingLLM server.",
-          "tooltip": "Provide a web link to upload on AnythingLLM server."
+          "description": "Specify the web link to upload on AnythingLLM server.",
+          "tooltip": "Specify the web link to upload on AnythingLLM server."
         }
       ],
       "enabled": true,
@@ -389,8 +389,8 @@
           "visible": true,
           "type": "text",
           "name": "plain_text",
-          "description": "Provide raw text content that is the document.",
-          "tooltip": "Provide raw text content that is the document."
+          "description": "Specify the raw text content that is the document.",
+          "tooltip": "Specify the raw text content that is the document."
         },
         {
           "title": "Document Title",
@@ -399,8 +399,8 @@
           "visible": true,
           "type": "text",
           "name": "doc_title",
-          "description": "Provide document title to use when uploading.",
-          "tooltip": "Provide document title to use when uploading."
+          "description": "Specify the document title to use when uploading.",
+          "tooltip": "Specify the document title to use when uploading."
         },
         {
           "title": "Description",
@@ -409,8 +409,8 @@
           "visible": true,
           "type": "text",
           "name": "description",
-          "description": "Provide description for the document.",
-          "tooltip": "Provide description for the document."
+          "description": "Specify the description for the document.",
+          "tooltip": "Specify the description for the document."
         },
         {
           "title": "Author",
@@ -419,8 +419,8 @@
           "visible": true,
           "type": "text",
           "name": "author",
-          "description": "Provide author name for the document.",
-          "tooltip": "Provide author name for the document."
+          "description": "Specify the author name for the document.",
+          "tooltip": "Specify the author name for the document."
         },
         {
           "title": "Source",
@@ -429,8 +429,8 @@
           "visible": true,
           "type": "text",
           "name": "source",
-          "description": "Provide source name for the document.",
-          "tooltip": "Provide source name for the document."
+          "description": "Specify the source name for the document.",
+          "tooltip": "Specify the source name for the document."
         }
       ],
       "enabled": true,
@@ -469,8 +469,8 @@
           "visible": true,
           "type": "text",
           "name": "workspace_name",
-          "description": "Provide workspace name to create new workspace.",
-          "tooltip": "Provide workspace name to create new workspace."
+          "description": "Specify the workspace name to create new workspace.",
+          "tooltip": "Specify the workspace name to create new workspace."
         }
       ],
       "enabled": true,
@@ -502,8 +502,8 @@
           "visible": true,
           "type": "text",
           "name": "folder_name",
-          "description": "Provide folder name to create into documents storage directory.",
-          "tooltip": "Provide folder name to create into documents storage directory."
+          "description": "Specify the folder name to create into documents storage directory.",
+          "tooltip": "Specify the folder name to create into documents storage directory."
         }
       ],
       "enabled": true,
@@ -526,8 +526,8 @@
           "visible": true,
           "type": "text",
           "name": "workspace_name",
-          "description": "Provide Workspace Slug to update workspace details.",
-          "tooltip": "Provide Workspace Slug to update workspace details."
+          "description": "Specify the Workspace Slug to update workspace details.",
+          "tooltip": "Specify the Workspace Slug to update workspace details."
         },
         {
           "title": "Workspace Settings",
@@ -536,8 +536,8 @@
           "visible": true,
           "type": "json",
           "name": "settings_data",
-          "description": "Provide workspace settings to update workspace.",
-          "tooltip": "Provide workspace settings to update workspace."
+          "description": "Specify the workspace settings to update workspace.",
+          "tooltip": "Specify the workspace settings to update workspace."
         }
       ],
       "enabled": true,
@@ -570,8 +570,8 @@
           "visible": true,
           "type": "text",
           "name": "workspace_name",
-          "description": "Provide Workspace Slug to chat with.",
-          "tooltip": "Provide Workspace Slug to chat with."
+          "description": "Specify the Workspace Slug to chat with.",
+          "tooltip": "Specify the Workspace Slug to chat with."
         },
         {
           "title": "Massage to send",
@@ -580,8 +580,8 @@
           "visible": true,
           "type": "text",
           "name": "message",
-          "description": "Provide massage to send on workspace.",
-          "tooltip": "Provide massage to send on workspace."
+          "description": "Specify the massage to send on workspace.",
+          "tooltip": "Specify the massage to send on workspace."
         },
         {
           "title": "Mode",
@@ -594,8 +594,8 @@
             "Chat"
           ],
           "name": "mode",
-          "description": "Mode to chat, query or chat. Possible values are: query, chat.",
-          "tooltip": "Mode to chat, query or chat. Possible values are: query, chat."
+          "description": "Specify the mode to chat, query or chat. Possible values are: query, chat.",
+          "tooltip": "Specify the mode to chat, query or chat. Possible values are: query, chat."
         }
       ],
       "enabled": true,
@@ -623,8 +623,8 @@
           "visible": true,
           "type": "text",
           "name": "src_folder_name",
-          "description": "Provide folder name to move file from directory.",
-          "tooltip": "Provide folder name to move file from directory."
+          "description": "Specify the folder name to move file from directory.",
+          "tooltip": "Specify the folder name to move file from directory."
         },
         {
           "title": "Destination Folder Name",
@@ -633,8 +633,8 @@
           "visible": true,
           "type": "text",
           "name": "dest_folder_name",
-          "description": "Provide folder name to move file to directory.",
-          "tooltip": "Provide folder name to move file to directory."
+          "description": "Specify the folder name to move file to directory.",
+          "tooltip": "Specify the folder name to move file to directory."
         },
         {
           "title": "Document Name",
@@ -643,8 +643,8 @@
           "visible": true,
           "type": "text",
           "name": "doc_name",
-          "description": "Provide the name of document to move from source directory to destination directory.",
-          "tooltip": "Provide the name of document to move from source directory to destination directory."
+          "description": "Specify the name of document to move from source directory to destination directory.",
+          "tooltip": "Specify the name of document to move from source directory to destination directory."
         }
       ],
       "enabled": true,
@@ -667,8 +667,8 @@
           "visible": true,
           "type": "text",
           "name": "folder_name",
-          "description": "Provide folder name to delete file from directory.",
-          "tooltip": "Provide folder name to delete file from directory."
+          "description": "Specify the folder name to delete file from directory.",
+          "tooltip": "Specify the folder name to delete file from directory."
         },
         {
           "title": "Document Name",
@@ -677,8 +677,8 @@
           "visible": true,
           "type": "text",
           "name": "doc_name",
-          "description": "Provide the name of document to delete from directory.",
-          "tooltip": "Provide the name of document to delete from directory."
+          "description": "Specify the name of document to delete from directory.",
+          "tooltip": "Specify the name of document to delete from directory."
         }
       ],
       "enabled": true,
@@ -701,8 +701,8 @@
           "visible": true,
           "type": "text",
           "name": "workspace_name",
-          "description": "Provide Workspace Slug to remove a embedding the document.",
-          "tooltip": "Provide Workspace Slug to remove a embedding the document."
+          "description": "Specify the Workspace Slug to remove a embedding the document.",
+          "tooltip": "Specify the Workspace Slug to remove a embedding the document."
         },
         {
           "title": "Folder Name",
@@ -711,8 +711,8 @@
           "visible": true,
           "type": "text",
           "name": "folder_name",
-          "description": "Provide folder name to remove document from directory.",
-          "tooltip": "Provide folder name to remove document from directory."
+          "description": "Specify the folder name to remove document from directory.",
+          "tooltip": "Specify the folder name to remove document from directory."
         },
         {
           "title": "Document Name",
@@ -721,8 +721,8 @@
           "visible": true,
           "type": "text",
           "name": "doc_name",
-          "description": "Provide the name of document to remove embedding from provided directory.",
-          "tooltip": "Provide the name of document to remove embedding from provided directory."
+          "description": "Specify the name of document to remove embedding from provided directory.",
+          "tooltip": "Specify the name of document to remove embedding from provided directory."
         }
       ],
       "enabled": true,
