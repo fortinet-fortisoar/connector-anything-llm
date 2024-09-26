@@ -91,7 +91,7 @@
     {
       "operation": "get_document",
       "title": "Get Document by Name",
-      "description": "Retrieves a document details by providing there name.",
+      "description": "Retrieves a document details by providing their name.",
       "category": "investigation",
       "annotation": "get_document",
       "parameters": [

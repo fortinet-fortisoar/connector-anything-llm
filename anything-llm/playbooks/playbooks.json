@@ -142,7 +142,7 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Retrieves a document details by providing there name.",
+          "description": "Retrieves a document details by providing their name.",
           "name": "Get Document by Name",
           "tag": "#Anything LLM",
           "recordTags": [

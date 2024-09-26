@@ -35,7 +35,7 @@ For the procedure to configure a connector, click [here](https://docs.fortinet.c
 ## Actions supported by the connector
 The following automated operations can be included in playbooks and you can also use the annotations to access operations:
 <table border=1><thead><tr><th>Function</th><th>Description</th><th>Annotation and Category</th></tr></thead><tbody><tr><td>Get Documents List</td><td>Retrieves a list of all document those are uploaded on server.</td><td>get_documents <br/>Investigation</td></tr>
-<tr><td>Get Document by Name</td><td>Retrieves a document details by providing there name.</td><td>get_document <br/>Investigation</td></tr>
+<tr><td>Get Document by Name</td><td>Retrieves a document details by providing their name.</td><td>get_document <br/>Investigation</td></tr>
 <tr><td>Get Workspace List</td><td>Retrieves a list of all current workspace present on AnythingLLM server.</td><td>get_workspace_list <br/>Investigation</td></tr>
 <tr><td>Get Workspace by Slug</td><td>Retrieves a workspace details by providing Workspace Slug.</td><td>get_workspace <br/>Investigation</td></tr>
 <tr><td>Add Workspace Embedding</td><td>Add a document to a workspace and create its vector embedding in the workspace.</td><td>add_workspace_embedding <br/>Investigation</td></tr>
