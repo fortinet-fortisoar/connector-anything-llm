@@ -2,38 +2,32 @@
   "type": "workflow_collections",
   "data": [
     {
-      "uuid": "1b84fd93-47e5-4d75-92b3-ff715dd3785e",
+      "uuid": "df767d60-59ce-45c4-9c5e-c485d4af710f",
       "@type": "WorkflowCollection",
       "workflows": [
         {
           "@type": "Workflow",
-          "uuid": "0f9036f7-a270-47f2-9b1a-c06d9a81dacd",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
+          "uuid": "b4006b39-3052-4a00-8ccb-41402bf57354",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "637d7ee8-bcfa-40d1-98e5-4e59ba2f9a28",
+              "uuid": "a4c31825-91ed-46f5-b7cd-4dc4b1e84ff9",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Anything LLM",
-                "config": "",
-                "params": [],
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "get_documents",
-                "operationTitle": "Get List of All Documents",
+                "route": "0992708a-cbcb-402c-98be-a671a59901c0",
+                "title": "Anything LLM: Get Documents List",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
                 "step_variables": {
                   "input": {
                     "records": "{{vars.input.records[0]}}"
                   }
                 },
-                "title": "Anything LLM: Get List of All Documents",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
                 "singleRecordExecution": false,
                 "noRecordExecution": true,
                 "executeButtonText": "Execute"
@@ -43,30 +37,22 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "406b7d8e-c01d-4b41-a5ce-2c55403c3610",
+              "uuid": "d28e6570-74c0-4f57-aee9-8f88f4c4a384",
               "@type": "WorkflowStep",
-              "name": "Get List of All Documents",
+              "name": "Get Documents List",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "b5d40118-dabf-4485-b854-fb76c9bfdfbb",
-                "title": "Anything LLM: Get List of All Documents",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "output_data": "{{vars.result}}"
-                },
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute",
-                "config": "",
+                "name": "Anything LLM",
+                "config": "''",
                 "params": [],
                 "version": "1.0.0",
                 "connector": "anything-llm",
                 "operation": "get_documents",
-                "operationTitle": "Get List of All Documents"
+                "operationTitle": "Get Documents List",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
               },
               "left": "188",
               "top": "120",
@@ -74,11 +60,11 @@
             }
           ],
           "triggerLimit": null,
-          "description": "List of all document those are uploaded on server.",
-          "name": "Get List of All Documents",
+          "description": "Retrieves a list of all document those are uploaded on server.",
+          "name": "Get Documents List",
           "tag": "#Anything LLM",
           "recordTags": [
-            "anything-llm",
+            "Anything",
             "anything-llm"
           ],
           "isActive": false,
@@ -86,50 +72,124 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/637d7ee8-bcfa-40d1-98e5-4e59ba2f9a28",
+          "triggerStep": "/api/3/workflow_steps/a4c31825-91ed-46f5-b7cd-4dc4b1e84ff9",
           "routes": [
             {
-              "uuid": "deed913d-a904-4451-a533-51034c3543ee",
+              "uuid": "7b4bbc3b-f451-46ea-ba70-02dcd68aaca8",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
-              "name": "Start-> Get List of All Documents",
-              "sourceStep": "/api/3/workflow_steps/637d7ee8-bcfa-40d1-98e5-4e59ba2f9a28",
-              "targetStep": "/api/3/workflow_steps/406b7d8e-c01d-4b41-a5ce-2c55403c3610"
+              "name": "Start-> Get Documents List",
+              "sourceStep": "/api/3/workflow_steps/a4c31825-91ed-46f5-b7cd-4dc4b1e84ff9",
+              "targetStep": "/api/3/workflow_steps/d28e6570-74c0-4f57-aee9-8f88f4c4a384"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "6c423ee1-395c-4fa8-bb29-e2ae95139607",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
+          "uuid": "db29ab98-93f0-4069-8a06-cd3f9e2eb0e8",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "6557a9ed-4117-4e8b-8acd-16a92987f11a",
+              "uuid": "1c394a57-9973-42bc-9976-04890e7536db",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
+                "route": "f6f70149-7d8a-48c4-8734-9037a99d0720",
+                "title": "Anything LLM: Get Document by Name",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "377a5559-0fe1-4d40-817f-4e4c4318a4e2",
+              "@type": "WorkflowStep",
+              "name": "Get Document by Name",
+              "description": null,
+              "status": null,
+              "arguments": {
                 "name": "Anything LLM",
-                "config": "",
+                "config": "''",
                 "params": {
                   "doc_name": ""
                 },
                 "version": "1.0.0",
                 "connector": "anything-llm",
                 "operation": "get_document",
-                "operationTitle": "Get Document",
+                "operationTitle": "Get Document by Name",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves a document details by providing their name.",
+          "name": "Get Document by Name",
+          "tag": "#Anything LLM",
+          "recordTags": [
+            "Anything",
+            "anything-llm"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/1c394a57-9973-42bc-9976-04890e7536db",
+          "routes": [
+            {
+              "uuid": "6a53654d-f001-4bd6-9c18-553ab2dc3285",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Document by Name",
+              "sourceStep": "/api/3/workflow_steps/1c394a57-9973-42bc-9976-04890e7536db",
+              "targetStep": "/api/3/workflow_steps/377a5559-0fe1-4d40-817f-4e4c4318a4e2"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "e1b4b303-a891-45d3-bc91-2c2ed9d7881a",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
+          "steps": [
+            {
+              "uuid": "0370b58b-0151-4063-8800-dd35c66732d0",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "route": "2f86837e-8eb0-414f-b43f-bbe7b5e20393",
+                "title": "Anything LLM: Get Workspace List",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
                 "step_variables": {
                   "input": {
                     "records": "{{vars.input.records[0]}}"
                   }
                 },
-                "title": "Anything LLM: Get Document",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
                 "singleRecordExecution": false,
                 "noRecordExecution": true,
                 "executeButtonText": "Execute"
@@ -139,32 +199,22 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "bcf0a1f7-f8c7-4952-88e1-5320231fb787",
+              "uuid": "c1daf9f7-f3fc-4c6a-8e60-d0ba498958c8",
               "@type": "WorkflowStep",
-              "name": "Get Document",
+              "name": "Get Workspace List",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "b899406a-d754-41b1-9ad1-1e39aa944244",
-                "title": "Anything LLM: Get Document",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "output_data": "{{vars.result}}"
-                },
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute",
-                "config": "",
-                "params": {
-                  "doc_name": ""
-                },
+                "name": "Anything LLM",
+                "config": "''",
+                "params": [],
                 "version": "1.0.0",
                 "connector": "anything-llm",
-                "operation": "get_document",
-                "operationTitle": "Get Document"
+                "operation": "get_workspace_list",
+                "operationTitle": "Get Workspace List",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
               },
               "left": "188",
               "top": "120",
@@ -172,11 +222,11 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Get document details by providing there name.",
-          "name": "Get Document",
+          "description": "Retrieves a list of all current workspace present on AnythingLLM server.",
+          "name": "Get Workspace List",
           "tag": "#Anything LLM",
           "recordTags": [
-            "anything-llm",
+            "Anything",
             "anything-llm"
           ],
           "isActive": false,
@@ -184,48 +234,42 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/6557a9ed-4117-4e8b-8acd-16a92987f11a",
+          "triggerStep": "/api/3/workflow_steps/0370b58b-0151-4063-8800-dd35c66732d0",
           "routes": [
             {
-              "uuid": "c8ab5d51-6691-4dbd-9512-82558facd2f3",
+              "uuid": "ee258f5b-f8ed-471b-9c84-79f947056be2",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
-              "name": "Start-> Get Document",
-              "sourceStep": "/api/3/workflow_steps/6557a9ed-4117-4e8b-8acd-16a92987f11a",
-              "targetStep": "/api/3/workflow_steps/bcf0a1f7-f8c7-4952-88e1-5320231fb787"
+              "name": "Start-> Get Workspace List",
+              "sourceStep": "/api/3/workflow_steps/0370b58b-0151-4063-8800-dd35c66732d0",
+              "targetStep": "/api/3/workflow_steps/c1daf9f7-f3fc-4c6a-8e60-d0ba498958c8"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "eff69bf3-1d56-488b-8725-1f4d9d2f75ab",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
+          "uuid": "50d81d80-30dc-43f8-9db2-5a3b77790f83",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "44663174-2675-49df-9f39-d2d9297a48d9",
+              "uuid": "86977850-e6d7-4e96-a45f-a0eacd4a454e",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Anything LLM",
-                "config": "",
-                "params": [],
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "get_workspace_list",
-                "operationTitle": "Get List of all Workspace",
+                "route": "5e7d7cbf-2826-441c-9e7d-447372e842e5",
+                "title": "Anything LLM: Get Workspace by Slug",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
                 "step_variables": {
                   "input": {
                     "records": "{{vars.input.records[0]}}"
                   }
                 },
-                "title": "Anything LLM: Get List of all Workspace",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
                 "singleRecordExecution": false,
                 "noRecordExecution": true,
                 "executeButtonText": "Execute"
@@ -235,93 +279,79 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "0ccda25a-7cad-4ee7-81f0-198953e07d48",
+              "uuid": "76d966ba-f876-42b8-b867-3d4f3007366b",
               "@type": "WorkflowStep",
-              "name": "Get List of all Workspace",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "route": "2c6a64b5-a3ad-4373-8b4f-c161a5bc9020",
-                "title": "Anything LLM: Get List of all Workspace",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "output_data": "{{vars.result}}"
-                },
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute",
-                "config": "",
-                "params": [],
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "get_workspace_list",
-                "operationTitle": "Get List of all Workspace"
-              },
-              "left": "188",
-              "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
-          "triggerLimit": null,
-          "description": "Get list of all current workspace present on AnythingLLM server.",
-          "name": "Get List of all Workspace",
-          "tag": "#Anything LLM",
-          "recordTags": [
-            "anything-llm",
-            "anything-llm"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/44663174-2675-49df-9f39-d2d9297a48d9",
-          "routes": [
-            {
-              "uuid": "60aaba54-b99c-49a6-a943-760d4b7f3ad3",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Get List of all Workspace",
-              "sourceStep": "/api/3/workflow_steps/44663174-2675-49df-9f39-d2d9297a48d9",
-              "targetStep": "/api/3/workflow_steps/0ccda25a-7cad-4ee7-81f0-198953e07d48"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "38712b1d-07be-4b8e-98b9-e2f8153a1df1",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
-          "steps": [
-            {
-              "uuid": "581fd821-3630-48af-bed1-1804069d0c12",
-              "@type": "WorkflowStep",
-              "name": "Start",
+              "name": "Get Workspace by Slug",
               "description": null,
               "status": null,
               "arguments": {
                 "name": "Anything LLM",
-                "config": "",
+                "config": "''",
                 "params": {
                   "workspace_name": ""
                 },
                 "version": "1.0.0",
                 "connector": "anything-llm",
                 "operation": "get_workspace",
-                "operationTitle": "Get Workspace",
+                "operationTitle": "Get Workspace by Slug",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves a workspace details by providing Workspace Slug.",
+          "name": "Get Workspace by Slug",
+          "tag": "#Anything LLM",
+          "recordTags": [
+            "Anything",
+            "anything-llm"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/86977850-e6d7-4e96-a45f-a0eacd4a454e",
+          "routes": [
+            {
+              "uuid": "61cee5a3-f6f3-4b3f-b223-739533a1b2ce",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Workspace by Slug",
+              "sourceStep": "/api/3/workflow_steps/86977850-e6d7-4e96-a45f-a0eacd4a454e",
+              "targetStep": "/api/3/workflow_steps/76d966ba-f876-42b8-b867-3d4f3007366b"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "0bdbe0be-04f4-4b38-bca9-76c2f1d9e029",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
+          "steps": [
+            {
+              "uuid": "beb2f3e5-27a1-4622-b1d3-6261321913c2",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "route": "eef8e830-bb8d-43aa-9610-f55c86331ad6",
+                "title": "Anything LLM: Add Workspace Embedding",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
                 "step_variables": {
                   "input": {
                     "records": "{{vars.input.records[0]}}"
                   }
                 },
-                "title": "Anything LLM: Get Workspace",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
                 "singleRecordExecution": false,
                 "noRecordExecution": true,
                 "executeButtonText": "Execute"
@@ -331,78 +361,14 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "966d5e3c-fed3-41e8-a448-8cbd47863c31",
+              "uuid": "f68e39e6-921d-4740-8bd4-76bb20d5ab33",
               "@type": "WorkflowStep",
-              "name": "Get Workspace",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "route": "dd0bc33c-646f-4582-b149-9f6a8a32da18",
-                "title": "Anything LLM: Get Workspace",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "output_data": "{{vars.result}}"
-                },
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute",
-                "config": "",
-                "params": {
-                  "workspace_name": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "get_workspace",
-                "operationTitle": "Get Workspace"
-              },
-              "left": "188",
-              "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
-          "triggerLimit": null,
-          "description": "Get workspace details by providing workspace name.",
-          "name": "Get Workspace",
-          "tag": "#Anything LLM",
-          "recordTags": [
-            "anything-llm",
-            "anything-llm"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/581fd821-3630-48af-bed1-1804069d0c12",
-          "routes": [
-            {
-              "uuid": "0238b70f-bca2-4c05-bce7-e386589d6518",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Get Workspace",
-              "sourceStep": "/api/3/workflow_steps/581fd821-3630-48af-bed1-1804069d0c12",
-              "targetStep": "/api/3/workflow_steps/966d5e3c-fed3-41e8-a448-8cbd47863c31"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "84b30a40-fe48-4453-b12b-2c2819dcf54b",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
-          "steps": [
-            {
-              "uuid": "ab854b98-b6ea-434c-a39f-45e27837305e",
-              "@type": "WorkflowStep",
-              "name": "Start",
+              "name": "Add Workspace Embedding",
               "description": null,
               "status": null,
               "arguments": {
                 "name": "Anything LLM",
-                "config": "",
+                "config": "''",
                 "params": {
                   "workspace_name": "",
                   "folder_name": "",
@@ -413,52 +379,8 @@
                 "operation": "add_workspace_embedding",
                 "operationTitle": "Add Workspace Embedding",
                 "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records[0]}}"
-                  }
-                },
-                "title": "Anything LLM: Add Workspace Embedding",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute"
-              },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
-            },
-            {
-              "uuid": "58446bb8-162b-45e9-ba67-9dc4d0a2f97a",
-              "@type": "WorkflowStep",
-              "name": "Add Workspace Embedding",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "route": "b23905c8-dc02-4583-95d1-b007a123e22b",
-                "title": "Anything LLM: Add Workspace Embedding",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
                   "output_data": "{{vars.result}}"
-                },
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute",
-                "config": "",
-                "params": {
-                  "workspace_name": "",
-                  "folder_name": "",
-                  "doc_name": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "add_workspace_embedding",
-                "operationTitle": "Add Workspace Embedding"
+                }
               },
               "left": "188",
               "top": "120",
@@ -470,7 +392,7 @@
           "name": "Add Workspace Embedding",
           "tag": "#Anything LLM",
           "recordTags": [
-            "anything-llm",
+            "Anything",
             "anything-llm"
           ],
           "isActive": false,
@@ -478,50 +400,42 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/ab854b98-b6ea-434c-a39f-45e27837305e",
+          "triggerStep": "/api/3/workflow_steps/beb2f3e5-27a1-4622-b1d3-6261321913c2",
           "routes": [
             {
-              "uuid": "ca2a7bac-862f-4cd8-86b6-f42e0ba23832",
+              "uuid": "c4ce6581-5a53-45fd-a868-b60f76b03553",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Add Workspace Embedding",
-              "sourceStep": "/api/3/workflow_steps/ab854b98-b6ea-434c-a39f-45e27837305e",
-              "targetStep": "/api/3/workflow_steps/58446bb8-162b-45e9-ba67-9dc4d0a2f97a"
+              "sourceStep": "/api/3/workflow_steps/beb2f3e5-27a1-4622-b1d3-6261321913c2",
+              "targetStep": "/api/3/workflow_steps/f68e39e6-921d-4740-8bd4-76bb20d5ab33"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "29517a39-7b3b-4e44-8db7-b8b089338854",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
+          "uuid": "fb454f74-30c6-44d7-b86d-42adae9751b7",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "dce3337a-5e13-4597-8987-0fdf6af3c6ac",
+              "uuid": "c3646b1b-8fde-45a9-86de-f9102c715535",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Anything LLM",
-                "config": "",
-                "params": {
-                  "file_type": "Record IRI"
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "upload_document",
-                "operationTitle": "Upload Document",
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records[0]}}"
-                  }
-                },
+                "route": "0f310823-a9d1-4fea-a315-d309e5bb3a94",
                 "title": "Anything LLM: Upload Document",
                 "resources": [
                   "alerts"
                 ],
                 "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
                 "singleRecordExecution": false,
                 "noRecordExecution": true,
                 "executeButtonText": "Execute"
@@ -531,32 +445,24 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "e95aa808-847d-4e40-9bd7-87db7228c385",
+              "uuid": "3b48f2d0-d969-466d-b584-6bf5ab093a38",
               "@type": "WorkflowStep",
               "name": "Upload Document",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "aa5960cf-8b4d-4e19-869d-befaf93f9d97",
-                "title": "Anything LLM: Upload Document",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "output_data": "{{vars.result}}"
-                },
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute",
-                "config": "",
+                "name": "Anything LLM",
+                "config": "''",
                 "params": {
                   "file_type": "Record IRI"
                 },
                 "version": "1.0.0",
                 "connector": "anything-llm",
                 "operation": "upload_document",
-                "operationTitle": "Upload Document"
+                "operationTitle": "Upload Document",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
               },
               "left": "188",
               "top": "120",
@@ -568,7 +474,7 @@
           "name": "Upload Document",
           "tag": "#Anything LLM",
           "recordTags": [
-            "anything-llm",
+            "Anything",
             "anything-llm"
           ],
           "isActive": false,
@@ -576,54 +482,42 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/dce3337a-5e13-4597-8987-0fdf6af3c6ac",
+          "triggerStep": "/api/3/workflow_steps/c3646b1b-8fde-45a9-86de-f9102c715535",
           "routes": [
             {
-              "uuid": "b7f570a9-5af6-424d-8a6f-ed24494f907d",
+              "uuid": "faed2ff7-c5be-4534-b0fb-a54b21c01024",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Upload Document",
-              "sourceStep": "/api/3/workflow_steps/dce3337a-5e13-4597-8987-0fdf6af3c6ac",
-              "targetStep": "/api/3/workflow_steps/e95aa808-847d-4e40-9bd7-87db7228c385"
+              "sourceStep": "/api/3/workflow_steps/c3646b1b-8fde-45a9-86de-f9102c715535",
+              "targetStep": "/api/3/workflow_steps/3b48f2d0-d969-466d-b584-6bf5ab093a38"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "8cbe9238-83fe-4755-8c72-1e69ba4e86d5",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
+          "uuid": "438150ff-7f4d-4523-8abd-e76352569c76",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "52cc28df-79df-4194-8ba8-8b1fbb66deb8",
+              "uuid": "3beb0609-c307-4429-be55-4d7835aa1c24",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Anything LLM",
-                "config": "",
-                "params": {
-                  "src_folder_name": "",
-                  "title": "",
-                  "description": "",
-                  "author": "",
-                  "source": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "upload_document_link",
-                "operationTitle": "Upload Document Link",
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records[0]}}"
-                  }
-                },
+                "route": "7121917b-fd20-44b5-9b20-ddf64d8850ea",
                 "title": "Anything LLM: Upload Document Link",
                 "resources": [
                   "alerts"
                 ],
                 "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
                 "singleRecordExecution": false,
                 "noRecordExecution": true,
                 "executeButtonText": "Execute"
@@ -633,32 +527,24 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "0572c649-d1d8-4e49-8233-51488ab045d8",
+              "uuid": "fe36b5e5-400b-4b36-8efc-f068166ff01f",
               "@type": "WorkflowStep",
               "name": "Upload Document Link",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "6583d9e7-ab94-423b-9659-818b82ab0f69",
-                "title": "Anything LLM: Upload Document Link",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "output_data": "{{vars.result}}"
-                },
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute",
-                "config": "",
+                "name": "Anything LLM",
+                "config": "''",
                 "params": {
-                  "src_folder_name": ""
+                  "web_link": ""
                 },
                 "version": "1.0.0",
                 "connector": "anything-llm",
                 "operation": "upload_document_link",
-                "operationTitle": "Upload Document Link"
+                "operationTitle": "Upload Document Link",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
               },
               "left": "188",
               "top": "120",
@@ -670,7 +556,7 @@
           "name": "Upload Document Link",
           "tag": "#Anything LLM",
           "recordTags": [
-            "anything-llm",
+            "Anything",
             "anything-llm"
           ],
           "isActive": false,
@@ -678,33 +564,59 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/52cc28df-79df-4194-8ba8-8b1fbb66deb8",
+          "triggerStep": "/api/3/workflow_steps/3beb0609-c307-4429-be55-4d7835aa1c24",
           "routes": [
             {
-              "uuid": "df1d508b-d3c6-42ab-a732-e62810671fef",
+              "uuid": "8b64d823-eeb2-4983-97c7-2f15760c7376",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Upload Document Link",
-              "sourceStep": "/api/3/workflow_steps/52cc28df-79df-4194-8ba8-8b1fbb66deb8",
-              "targetStep": "/api/3/workflow_steps/0572c649-d1d8-4e49-8233-51488ab045d8"
+              "sourceStep": "/api/3/workflow_steps/3beb0609-c307-4429-be55-4d7835aa1c24",
+              "targetStep": "/api/3/workflow_steps/fe36b5e5-400b-4b36-8efc-f068166ff01f"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "b6328c58-465b-44f3-a5c9-abbe4d2c7099",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
+          "uuid": "d2e51f0b-848f-4ab9-bec5-3c8569770169",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "1ddeead8-a01a-483c-8d9e-d69ab83eda0d",
+              "uuid": "e7b28dad-02fe-4265-9078-55ea385fe1ed",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
+                "route": "9b9ce806-3e05-4895-a4d4-6e97a8ab1f43",
+                "title": "Anything LLM: Upload Document Text",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "fce85de7-5530-48cd-8028-d4d93a2ec0a8",
+              "@type": "WorkflowStep",
+              "name": "Upload Document Text",
+              "description": null,
+              "status": null,
+              "arguments": {
                 "name": "Anything LLM",
-                "config": "",
+                "config": "''",
                 "params": {
                   "plain_text": "",
                   "doc_title": "",
@@ -717,54 +629,8 @@
                 "operation": "upload_document_text",
                 "operationTitle": "Upload Document Text",
                 "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records[0]}}"
-                  }
-                },
-                "title": "Anything LLM: Upload Document Text",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute"
-              },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
-            },
-            {
-              "uuid": "4fdefd22-f6ca-4868-8698-a8ef95fc0146",
-              "@type": "WorkflowStep",
-              "name": "Upload Document Text",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "route": "ccdf35e9-24cb-4395-b80c-36721a7d06a5",
-                "title": "Anything LLM: Upload Document Text",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
                   "output_data": "{{vars.result}}"
-                },
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute",
-                "config": "",
-                "params": {
-                  "plain_text": "",
-                  "doc_title": "",
-                  "description": "",
-                  "author": "",
-                  "source": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "upload_document_text",
-                "operationTitle": "Upload Document Text"
+                }
               },
               "left": "188",
               "top": "120",
@@ -776,7 +642,7 @@
           "name": "Upload Document Text",
           "tag": "#Anything LLM",
           "recordTags": [
-            "anything-llm",
+            "Anything",
             "anything-llm"
           ],
           "isActive": false,
@@ -784,744 +650,32 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/1ddeead8-a01a-483c-8d9e-d69ab83eda0d",
+          "triggerStep": "/api/3/workflow_steps/e7b28dad-02fe-4265-9078-55ea385fe1ed",
           "routes": [
             {
-              "uuid": "7d3d72fd-09c0-48e6-a51d-b0bbf5b5bad3",
+              "uuid": "c2ee2ea9-b0ea-4a5b-b617-28467976ddf6",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Upload Document Text",
-              "sourceStep": "/api/3/workflow_steps/1ddeead8-a01a-483c-8d9e-d69ab83eda0d",
-              "targetStep": "/api/3/workflow_steps/4fdefd22-f6ca-4868-8698-a8ef95fc0146"
+              "sourceStep": "/api/3/workflow_steps/e7b28dad-02fe-4265-9078-55ea385fe1ed",
+              "targetStep": "/api/3/workflow_steps/fce85de7-5530-48cd-8028-d4d93a2ec0a8"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "fda028aa-5446-4da6-98b7-0c11d3b9165b",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
+          "uuid": "01df408e-be10-46ce-990e-8fcbacd18ea3",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
           "steps": [
             {
-              "uuid": "c16f9ecf-8265-4f8e-ab09-7815ba9a82c7",
+              "uuid": "19075c05-e11f-4b45-91c2-6e99cbe4bf21",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Anything LLM",
-                "config": "",
-                "params": {
-                  "folder_name": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "create_document_folder",
-                "operationTitle": "Create Folder in Documents",
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records[0]}}"
-                  }
-                },
-                "title": "Anything LLM: Create Folder in Documents",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute"
-              },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
-            },
-            {
-              "uuid": "8726d4f0-7a80-4c22-93bf-b81c8fced8e2",
-              "@type": "WorkflowStep",
-              "name": "Create Folder in Documents",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "route": "7747abf7-bf6e-4ba3-b4e8-131c176463fe",
-                "title": "Anything LLM: Create Folder in Documents",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "output_data": "{{vars.result}}"
-                },
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute",
-                "config": "",
-                "params": {
-                  "folder_name": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "create_document_folder",
-                "operationTitle": "Create Folder in Documents"
-              },
-              "left": "188",
-              "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
-          "triggerLimit": null,
-          "description": "Create a new folder inside the documents storage directory.",
-          "name": "Create Folder in Documents",
-          "tag": "#Anything LLM",
-          "recordTags": [
-            "anything-llm",
-            "anything-llm"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/c16f9ecf-8265-4f8e-ab09-7815ba9a82c7",
-          "routes": [
-            {
-              "uuid": "d3116c3b-07fd-454d-8b38-5125390ecc68",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Create Folder in Documents",
-              "sourceStep": "/api/3/workflow_steps/c16f9ecf-8265-4f8e-ab09-7815ba9a82c7",
-              "targetStep": "/api/3/workflow_steps/8726d4f0-7a80-4c22-93bf-b81c8fced8e2"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "946f20bc-3ca4-4871-a3da-786f61db9789",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
-          "steps": [
-            {
-              "uuid": "cf319f72-0578-44fb-92ac-f00b375c5e29",
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "name": "Anything LLM",
-                "config": "",
-                "params": {
-                  "workspace_name": "",
-                  "settings_data": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "update_workspace_settings",
-                "operationTitle": "Update Workspace Settings",
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records[0]}}"
-                  }
-                },
-                "title": "Anything LLM: Update Workspace Settings",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute"
-              },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
-            },
-            {
-              "uuid": "8f66465d-db1d-4fef-9db1-1b2871ad732c",
-              "@type": "WorkflowStep",
-              "name": "Update Workspace Settings",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "route": "de3f8973-f355-4f5d-b835-16eef36ff27c",
-                "title": "Anything LLM: Update Workspace Settings",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "output_data": "{{vars.result}}"
-                },
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute",
-                "config": "",
-                "params": {
-                  "workspace_name": "",
-                  "settings_data": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "update_workspace_settings",
-                "operationTitle": "Update Workspace Settings"
-              },
-              "left": "188",
-              "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
-          "triggerLimit": null,
-          "description": "Update workspace settings which present on AnythingLLM server.",
-          "name": "Update Workspace Settings",
-          "tag": "#Anything LLM",
-          "recordTags": [
-            "anything-llm",
-            "anything-llm"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/cf319f72-0578-44fb-92ac-f00b375c5e29",
-          "routes": [
-            {
-              "uuid": "e79231e4-0084-47bc-ac4a-624b6c8b151b",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Update Workspace Settings",
-              "sourceStep": "/api/3/workflow_steps/cf319f72-0578-44fb-92ac-f00b375c5e29",
-              "targetStep": "/api/3/workflow_steps/8f66465d-db1d-4fef-9db1-1b2871ad732c"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "a741cae7-0186-4566-ad57-f078f27f8f30",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
-          "steps": [
-            {
-              "uuid": "1ef8f418-f7e1-4de0-a2a2-f89cd8dcd167",
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "name": "Anything LLM",
-                "config": "",
-                "params": {
-                  "workspace_name": "",
-                  "message": "",
-                  "mode": [
-                    "Query",
-                    "Chat"
-                  ]
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "workspace_chat",
-                "operationTitle": "Workspace Chat",
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records[0]}}"
-                  }
-                },
-                "title": "Anything LLM: Workspace Chat",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute"
-              },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
-            },
-            {
-              "uuid": "1a35a6d8-a13b-43b2-9d07-cf40611afd95",
-              "@type": "WorkflowStep",
-              "name": "Workspace Chat",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "route": "38ca973b-9a16-416d-8a24-2f01cf9daad2",
-                "title": "Anything LLM: Workspace Chat",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "output_data": "{{vars.result}}"
-                },
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute",
-                "config": "",
-                "params": {
-                  "workspace_name": "",
-                  "message": "",
-                  "mode": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "workspace_chat",
-                "operationTitle": "Workspace Chat"
-              },
-              "left": "188",
-              "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
-          "triggerLimit": null,
-          "description": "Send a chat message to a workspace (default thread). Query mode is based on embedded documents in chat, whereas chat mode is more general",
-          "name": "Workspace Chat",
-          "tag": "#Anything LLM",
-          "recordTags": [
-            "anything-llm",
-            "anything-llm"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/1ef8f418-f7e1-4de0-a2a2-f89cd8dcd167",
-          "routes": [
-            {
-              "uuid": "0fd3c23a-a86d-4295-afa5-dc9fb8b61f9e",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Workspace Chat",
-              "sourceStep": "/api/3/workflow_steps/1ef8f418-f7e1-4de0-a2a2-f89cd8dcd167",
-              "targetStep": "/api/3/workflow_steps/1a35a6d8-a13b-43b2-9d07-cf40611afd95"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "9b3084c1-8743-47f0-a253-c0040a49d3db",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
-          "steps": [
-            {
-              "uuid": "b0760b28-c18a-4829-8c65-98c9b498ca01",
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "name": "Anything LLM",
-                "config": "",
-                "params": {
-                  "workspace_name": "",
-                  "message": "",
-                  "mode": [
-                    "Query",
-                    "Chat"
-                  ]
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "workspace_stream_chat",
-                "operationTitle": "Workspace Stream Chat",
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records[0]}}"
-                  }
-                },
-                "title": "Anything LLM: Workspace Stream Chat",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute"
-              },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
-            },
-            {
-              "uuid": "3aeaba23-e361-4b6a-93cd-0aea4cd13ab6",
-              "@type": "WorkflowStep",
-              "name": "Workspace Stream Chat",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "route": "e0e09482-d5f9-4a0d-9502-bfcf350c94f8",
-                "title": "Anything LLM: Workspace Stream Chat",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "output_data": "{{vars.result}}"
-                },
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute",
-                "config": "",
-                "params": {
-                  "workspace_name": "",
-                  "message": "",
-                  "mode": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "workspace_stream_chat",
-                "operationTitle": "Workspace Stream Chat"
-              },
-              "left": "188",
-              "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
-          "triggerLimit": null,
-          "description": "Send a stream chat message to a workspace (default thread). Query mode is based on embedded documents in chat, whereas chat mode is more general",
-          "name": "Workspace Stream Chat",
-          "tag": "#Anything LLM",
-          "recordTags": [
-            "anything-llm",
-            "anything-llm"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/b0760b28-c18a-4829-8c65-98c9b498ca01",
-          "routes": [
-            {
-              "uuid": "4f4f5b06-e32d-405f-949d-0cc6eb39aafa",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Workspace Stream Chat",
-              "sourceStep": "/api/3/workflow_steps/b0760b28-c18a-4829-8c65-98c9b498ca01",
-              "targetStep": "/api/3/workflow_steps/3aeaba23-e361-4b6a-93cd-0aea4cd13ab6"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "5b1be057-4b85-48d8-8fd7-afd5887c0ff3",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
-          "steps": [
-            {
-              "uuid": "bb6b1ef2-33ca-46dc-b90b-fb37c62c2ae2",
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "name": "Anything LLM",
-                "config": "",
-                "params": {
-                  "src_folder_name": "",
-                  "dest_folder_name": "",
-                  "doc_name": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "move_document",
-                "operationTitle": "Move Document",
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records[0]}}"
-                  }
-                },
-                "title": "Anything LLM: Move Document",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute"
-              },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
-            },
-            {
-              "uuid": "e122e789-c32d-46e1-b6e6-7c87b1f53ba9",
-              "@type": "WorkflowStep",
-              "name": "Move Document",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "route": "e532e2bd-8564-4df4-8601-f9be9c4afae8",
-                "title": "Anything LLM: Move Document",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "output_data": "{{vars.result}}"
-                },
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute",
-                "config": "",
-                "params": {
-                  "src_folder_name": "",
-                  "dest_folder_name": "",
-                  "doc_name": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "move_document",
-                "operationTitle": "Move Document"
-              },
-              "left": "188",
-              "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
-          "triggerLimit": null,
-          "description": "Move document within the documents storage directory.",
-          "name": "Move Document",
-          "tag": "#Anything LLM",
-          "recordTags": [
-            "anything-llm",
-            "anything-llm"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/bb6b1ef2-33ca-46dc-b90b-fb37c62c2ae2",
-          "routes": [
-            {
-              "uuid": "3830d02b-975b-4633-8abe-4c0cd062a10d",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Move Document",
-              "sourceStep": "/api/3/workflow_steps/bb6b1ef2-33ca-46dc-b90b-fb37c62c2ae2",
-              "targetStep": "/api/3/workflow_steps/e122e789-c32d-46e1-b6e6-7c87b1f53ba9"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "8cd8f832-f685-400d-b973-fb431ce5dd65",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
-          "steps": [
-            {
-              "uuid": "d91142bf-6eba-4bed-a56e-77303af8fa1b",
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "name": "Anything LLM",
-                "config": "",
-                "params": {
-                  "folder_name": "",
-                  "doc_name": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "delete_document",
-                "operationTitle": "Delete Document",
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records[0]}}"
-                  }
-                },
-                "title": "Anything LLM: Delete Document",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute"
-              },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
-            },
-            {
-              "uuid": "cd2349f8-8d8c-4032-a5df-9fabcd24392d",
-              "@type": "WorkflowStep",
-              "name": "Delete Document",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "route": "3dd5f07b-8583-4f4f-b404-2f36f5ea83a4",
-                "title": "Anything LLM: Delete Document",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "output_data": "{{vars.result}}"
-                },
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute",
-                "config": "",
-                "params": {
-                  "folder_name": "",
-                  "doc_name": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "delete_document",
-                "operationTitle": "Delete Document"
-              },
-              "left": "188",
-              "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
-          "triggerLimit": null,
-          "description": "Delete document permanently from AnythingLLM server.",
-          "name": "Delete Document",
-          "tag": "#Anything LLM",
-          "recordTags": [
-            "anything-llm",
-            "anything-llm"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/d91142bf-6eba-4bed-a56e-77303af8fa1b",
-          "routes": [
-            {
-              "uuid": "243f66f8-f224-4449-a514-3e7e590b351a",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Delete Document",
-              "sourceStep": "/api/3/workflow_steps/d91142bf-6eba-4bed-a56e-77303af8fa1b",
-              "targetStep": "/api/3/workflow_steps/cd2349f8-8d8c-4032-a5df-9fabcd24392d"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "e42e361c-703c-4f83-88f9-6c96489c4b76",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
-          "steps": [
-            {
-              "uuid": "f14f20bd-fab2-4264-b4f9-0afeecae0325",
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "name": "Anything LLM",
-                "config": "",
-                "params": {
-                  "workspace_name": "",
-                  "folder_name": "",
-                  "doc_name": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "delete_workspace_embedding",
-                "operationTitle": "Remove Workspace Embedding",
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records[0]}}"
-                  }
-                },
-                "title": "Anything LLM: Remove Workspace Embedding",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute"
-              },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
-            },
-            {
-              "uuid": "fb57d910-8334-497a-9d98-c8496acf4c3e",
-              "@type": "WorkflowStep",
-              "name": "Remove Workspace Embedding",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "route": "0f635a7b-480b-400e-b768-23bbed1710bb",
-                "title": "Anything LLM: Remove Workspace Embedding",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "output_data": "{{vars.result}}"
-                },
-                "singleRecordExecution": false,
-                "noRecordExecution": true,
-                "executeButtonText": "Execute",
-                "config": "",
-                "params": {
-                  "workspace_name": "",
-                  "folder_name": "",
-                  "doc_name": ""
-                },
-                "version": "1.0.0",
-                "connector": "anything-llm",
-                "operation": "delete_workspace_embedding",
-                "operationTitle": "Remove Workspace Embedding"
-              },
-              "left": "188",
-              "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
-          "triggerLimit": null,
-          "description": "Remove a document embedding from the workspace",
-          "name": "Remove Workspace Embedding",
-          "tag": "#Anything LLM",
-          "recordTags": [
-            "anything-llm",
-            "anything-llm"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/f14f20bd-fab2-4264-b4f9-0afeecae0325",
-          "routes": [
-            {
-              "uuid": "4ab40b8c-a9b3-4bd4-b343-d465a1b98500",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Remove Workspace Embedding",
-              "sourceStep": "/api/3/workflow_steps/f14f20bd-fab2-4264-b4f9-0afeecae0325",
-              "targetStep": "/api/3/workflow_steps/fb57d910-8334-497a-9d98-c8496acf4c3e"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "8ac38440-ef6e-4251-8b40-f5ce046a0e71",
-          "collection": "/api/3/workflow_collections/1b84fd93-47e5-4d75-92b3-ff715dd3785e",
-          "steps": [
-            {
-              "uuid": "d1778c2b-cc53-4665-b2f4-ae5401016846",
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "route": "2477199f-7cb7-4b89-9517-dae3b20ae859",
+                "route": "a60a82bc-85e0-4be5-a75a-3b47feea0ba9",
                 "title": "Anything LLM: Create Workspace",
                 "resources": [
                   "alerts"
@@ -1541,14 +695,14 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "4e88ee97-c05c-4f2e-909c-83dc28c97d99",
+              "uuid": "39a07570-8da1-4b2c-b146-1d4ae9e4cd31",
               "@type": "WorkflowStep",
               "name": "Create Workspace",
               "description": null,
               "status": null,
               "arguments": {
                 "name": "Anything LLM",
-                "config": "",
+                "config": "''",
                 "params": {
                   "workspace_name": ""
                 },
@@ -1570,7 +724,7 @@
           "name": "Create Workspace",
           "tag": "#Anything LLM",
           "recordTags": [
-            "anything-llm",
+            "Anything",
             "anything-llm"
           ],
           "isActive": false,
@@ -1578,16 +732,516 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/d1778c2b-cc53-4665-b2f4-ae5401016846",
+          "triggerStep": "/api/3/workflow_steps/19075c05-e11f-4b45-91c2-6e99cbe4bf21",
           "routes": [
             {
-              "uuid": "c9f5e8c4-21ac-4227-885d-f75f4fdb4cda",
+              "uuid": "de45e79f-a5af-4458-90d2-849e96d2596f",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Create Workspace",
-              "sourceStep": "/api/3/workflow_steps/d1778c2b-cc53-4665-b2f4-ae5401016846",
-              "targetStep": "/api/3/workflow_steps/4e88ee97-c05c-4f2e-909c-83dc28c97d99"
+              "sourceStep": "/api/3/workflow_steps/19075c05-e11f-4b45-91c2-6e99cbe4bf21",
+              "targetStep": "/api/3/workflow_steps/39a07570-8da1-4b2c-b146-1d4ae9e4cd31"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "bb7b7c02-53f7-4ecb-9a21-f6922641adca",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
+          "steps": [
+            {
+              "uuid": "90bc156a-6f32-4ee5-a1b3-9f10c687c726",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "route": "c81a4d03-196b-4669-9bbf-61f3ec0db5aa",
+                "title": "Anything LLM: Create Folder in Documents",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "6c2b78cf-91d7-4609-be41-612b00861368",
+              "@type": "WorkflowStep",
+              "name": "Create Folder in Documents",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Anything LLM",
+                "config": "''",
+                "params": {
+                  "folder_name": ""
+                },
+                "version": "1.0.0",
+                "connector": "anything-llm",
+                "operation": "create_document_folder",
+                "operationTitle": "Create Folder in Documents",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Create a new folder inside the documents storage directory.",
+          "name": "Create Folder in Documents",
+          "tag": "#Anything LLM",
+          "recordTags": [
+            "Anything",
+            "anything-llm"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/90bc156a-6f32-4ee5-a1b3-9f10c687c726",
+          "routes": [
+            {
+              "uuid": "05f8282e-0eae-445a-b337-10bab080f8e4",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Create Folder in Documents",
+              "sourceStep": "/api/3/workflow_steps/90bc156a-6f32-4ee5-a1b3-9f10c687c726",
+              "targetStep": "/api/3/workflow_steps/6c2b78cf-91d7-4609-be41-612b00861368"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "05b3d921-d743-49e3-804d-2cddccb3243c",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
+          "steps": [
+            {
+              "uuid": "538849cd-453b-49d7-8d42-b5161a471516",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "route": "e2625f1a-c71d-49ec-8a35-0b252e4e6ebe",
+                "title": "Anything LLM: Update Workspace Settings",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "2620a2e3-4ce2-48c6-a968-a51292f47048",
+              "@type": "WorkflowStep",
+              "name": "Update Workspace Settings",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Anything LLM",
+                "config": "''",
+                "params": {
+                  "workspace_name": "",
+                  "settings_data": ""
+                },
+                "version": "1.0.0",
+                "connector": "anything-llm",
+                "operation": "update_workspace_settings",
+                "operationTitle": "Update Workspace Settings",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Update workspace settings which present on AnythingLLM server.",
+          "name": "Update Workspace Settings",
+          "tag": "#Anything LLM",
+          "recordTags": [
+            "Anything",
+            "anything-llm"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/538849cd-453b-49d7-8d42-b5161a471516",
+          "routes": [
+            {
+              "uuid": "29ccbcb6-bb86-4acf-8673-fe99f4a31ded",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Update Workspace Settings",
+              "sourceStep": "/api/3/workflow_steps/538849cd-453b-49d7-8d42-b5161a471516",
+              "targetStep": "/api/3/workflow_steps/2620a2e3-4ce2-48c6-a968-a51292f47048"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "520e4c01-86d3-4120-be1d-a36f4311c432",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
+          "steps": [
+            {
+              "uuid": "45ebc90a-ef16-4317-a833-8e7a85f47ce6",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "route": "a18cacc4-b443-427f-ab0b-3185cdbcc301",
+                "title": "Anything LLM: Workspace Chat",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "d7d679c2-0445-4b3b-8764-b96c40f4750c",
+              "@type": "WorkflowStep",
+              "name": "Workspace Chat",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Anything LLM",
+                "config": "''",
+                "params": {
+                  "workspace_name": "",
+                  "message": "",
+                  "mode": ""
+                },
+                "version": "1.0.0",
+                "connector": "anything-llm",
+                "operation": "workspace_chat",
+                "operationTitle": "Workspace Chat",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Send a chat message to a workspace (default thread). Query mode is based on embedded documents in chat, whereas chat mode is more general",
+          "name": "Workspace Chat",
+          "tag": "#Anything LLM",
+          "recordTags": [
+            "Anything",
+            "anything-llm"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/45ebc90a-ef16-4317-a833-8e7a85f47ce6",
+          "routes": [
+            {
+              "uuid": "add724c4-032b-432a-bcd5-ee7383c6aa8b",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Workspace Chat",
+              "sourceStep": "/api/3/workflow_steps/45ebc90a-ef16-4317-a833-8e7a85f47ce6",
+              "targetStep": "/api/3/workflow_steps/d7d679c2-0445-4b3b-8764-b96c40f4750c"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "5e8bf277-063a-4366-842b-93296716f549",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
+          "steps": [
+            {
+              "uuid": "b84735f1-39b1-437a-a17b-03aa055fb60f",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "route": "fcd86355-b6b0-44e8-800c-d726f814be6e",
+                "title": "Anything LLM: Move Document",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "15ed5855-a51b-4d68-bd75-2c47b4074443",
+              "@type": "WorkflowStep",
+              "name": "Move Document",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Anything LLM",
+                "config": "''",
+                "params": {
+                  "src_folder_name": "",
+                  "dest_folder_name": "",
+                  "doc_name": ""
+                },
+                "version": "1.0.0",
+                "connector": "anything-llm",
+                "operation": "move_document",
+                "operationTitle": "Move Document",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Move document within the documents storage directory.",
+          "name": "Move Document",
+          "tag": "#Anything LLM",
+          "recordTags": [
+            "Anything",
+            "anything-llm"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/b84735f1-39b1-437a-a17b-03aa055fb60f",
+          "routes": [
+            {
+              "uuid": "a0abb5ab-9a3e-4bdd-ab9d-035d702b84bb",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Move Document",
+              "sourceStep": "/api/3/workflow_steps/b84735f1-39b1-437a-a17b-03aa055fb60f",
+              "targetStep": "/api/3/workflow_steps/15ed5855-a51b-4d68-bd75-2c47b4074443"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "13584e16-e07d-4c1e-931c-103834793b71",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
+          "steps": [
+            {
+              "uuid": "9ae0816a-40e6-4c3e-be5d-f3a38ced8187",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "route": "c9fe43b0-25f3-412a-8e59-531c067da7f2",
+                "title": "Anything LLM: Delete Document",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "bc16821a-8a65-411c-84f8-5a8190ed0e08",
+              "@type": "WorkflowStep",
+              "name": "Delete Document",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Anything LLM",
+                "config": "''",
+                "params": {
+                  "folder_name": "",
+                  "doc_name": ""
+                },
+                "version": "1.0.0",
+                "connector": "anything-llm",
+                "operation": "delete_document",
+                "operationTitle": "Delete Document",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Delete document permanently from AnythingLLM server.",
+          "name": "Delete Document",
+          "tag": "#Anything LLM",
+          "recordTags": [
+            "Anything",
+            "anything-llm"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/9ae0816a-40e6-4c3e-be5d-f3a38ced8187",
+          "routes": [
+            {
+              "uuid": "3baf50ef-8936-414e-9dbb-12635aeb82bc",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Delete Document",
+              "sourceStep": "/api/3/workflow_steps/9ae0816a-40e6-4c3e-be5d-f3a38ced8187",
+              "targetStep": "/api/3/workflow_steps/bc16821a-8a65-411c-84f8-5a8190ed0e08"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "0728d493-19b5-4a4f-ae3b-d900e1813125",
+          "collection": "/api/3/workflow_collections/df767d60-59ce-45c4-9c5e-c485d4af710f",
+          "steps": [
+            {
+              "uuid": "dc3a269b-bba7-4425-8538-9f7f84f5d339",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "route": "d52e5405-1a24-4f78-a8ae-6db845aa4b8a",
+                "title": "Anything LLM: Remove Workspace Embedding",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "079561ab-d4f0-42c8-b718-04a1286bb60e",
+              "@type": "WorkflowStep",
+              "name": "Remove Workspace Embedding",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Anything LLM",
+                "config": "''",
+                "params": {
+                  "workspace_name": "",
+                  "folder_name": "",
+                  "doc_name": ""
+                },
+                "version": "1.0.0",
+                "connector": "anything-llm",
+                "operation": "delete_workspace_embedding",
+                "operationTitle": "Remove Workspace Embedding",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Remove a document embedding from the workspace",
+          "name": "Remove Workspace Embedding",
+          "tag": "#Anything LLM",
+          "recordTags": [
+            "Anything",
+            "anything-llm"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/dc3a269b-bba7-4425-8538-9f7f84f5d339",
+          "routes": [
+            {
+              "uuid": "85acb1a6-03bb-4743-9993-7be044238936",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Remove Workspace Embedding",
+              "sourceStep": "/api/3/workflow_steps/dc3a269b-bba7-4425-8538-9f7f84f5d339",
+              "targetStep": "/api/3/workflow_steps/079561ab-d4f0-42c8-b718-04a1286bb60e"
             }
           ]
         }
@@ -1596,7 +1250,7 @@
       "description": "This connector is providing automation actions for Anything LLM that supports using Retrieval Augmented Generation (RAG) with an LLM and user documents embedded in a vector DB. The LLM and vector DB can be fully local for maximum data privacy or configured to use cloud-based services such as OpenAI. A variety of LLMs and vector DBs are supported. Anything LLM itself can be installed on customer infrastructure or accessed as a cloud service.",
       "visible": true,
       "recordTags": [
-        "anything-llm",
+        "Anything",
         "anything-llm"
       ]
     }
